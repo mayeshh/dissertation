@@ -1,0 +1,43 @@
+\chapter{48-spot setup and parts}
+\label{chpt:setup_appendix}
+
+The make and model of the parts used in the 48-spot setup are included here for researchers interested in constructing a multi-excitation wavelength, multispot microscope based on \ac{LCOS-SLM}s. 
+
+In Figure~\ref{fig:setup}, you can find a schematic representation of the 48-spot setup. 
+This setup employs two \ac{CW} lasers, each with a power of 1~W. 
+These lasers, the 2RU-VFL-Series from MPB Communications, Inc. in Quebec, Canada, emit light at two different excitation wavelengths: 532~nm (green) and 628~nm (red). 
+The intensity of both lasers can be controlled either through software or by adjusting a polarizer.
+
+For the red laser, an \ac{AOM} (P/N 48058 PCAOM, with corresponding electronics: P/N 64048-80-.1-4CH-5M, Neos Technology, Melbourne, FL) was used. 
+The \ac{AOM} was driven by a square wave (\ac{TTL}) with a period of 51.2~$mu$s and a 50\% duty cycle. 
+To align the polarization with the expected orientation at the \ac{LCOS-SLM}s, each laser's polarization was individually adjusted using a half-wave plate.
+
+Initially, both laser beams are expanded and collimated through a pair of doublet lenses, forming a Keplerian telescope, with focal lengths of $f_1 = 50$~mm and $f_2 = 250$~mm (not depicted in Fig.~\ref{fig:setup}). 
+Following this, the laser beams are directed towards the optical breadboard that the microscope sits on. 
+This is accomplished using two periscopes, and the beams are additionally expanded by two adjustable beam-expanders ($BE_{G}$ and $BE_{R}$: 3X, P/N 59-131, Edmund Optics).
+
+Subsequently, each expanded beam is directed towards its respective \ac{LCOS-SLM}, with the green laser directed to \ac{LCOS-SLM} P/N X10468-01 (Hamamatsu, Japan) and the red laser to \ac{LCOS-SLM} P/N X10468-07. 
+These \ac{LCOS-SLM} generate an array of spots at their focal plane, as illustrated in Figure \ref{fig:LCOS_params}. 
+The emitted light from these spots is initially combined using a dichroic mirror, $DM_{mix}$ (T550LPXR, Chroma Technology, VT), and then focused onto the microscope's focal plane. 
+This is achieved by employing a collimating lens, $L_3$ ($f = 250$~mm, AC508-250-A Thorlabs), and a water immersion objective lens (UAPOPlan NA 1.2, 60X, Olympus). 
+A dual-band dichroic mirror, $DM_{EX}$ (Brightline FF545/650-Di01, Semrock, NY), is employed to separate the excitation and emission light.
+
+Fluorescence emission is focused by the microscope tube lens, denoted as $L_2$. 
+Within the microscope, an internal flip mirror, $M_I$, serves the purpose of toggling between the side and bottom ports of the microscope. 
+A \ac{CMOS} camera (Grasshopper3 GS3-U3-23S6M-C model from FLIR in BC, Canada) is affixed to the side port, primarily for alignment purposes. 
+In contrast, the bottom port directs the emitted fluorescence to a recollimating lens, labeled as $L_4$ ($f = 100$~mm, AC254-100-A, Thorlabs). 
+The light is subsequently split using an emission dichroic mirror, $DM_{EM}$ (Brightline Di02-R635, Semrock). 
+To mitigate spectral leakage from the red laser and combat Raman scattering associated with the green laser, additional band-pass filters are incorporated into the donor emission path (donor: Brightline FF01-582/75, Semrock).
+
+Lens $L_{5}$ ($f = 150$ mm, AC254-150-A, Thorlabs) serves to focus each signal onto its respective \ac{SPAD} array. 
+The \ac{SPAD} arrays are situated on micro-positioning stages, providing the capability to make adjustments in all three dimensions. 
+For precise alignment in the x and y directions, open-loop piezo-actuators (P/N 8302; drivers: P/N 8752 and 8753; Newport Corporation, Irvine, CA) are employed and controlled via software.
+
+Each SPAD array is outfitted with several components: an \ac{FPGA} based on the Xilinx Spartan 6 model SLX150, a humidity sensor, and a USB connection for monitoring time-binned counts and humidity levels. 
+The \ac{FPGA} provides 48 parallel and independent streams of \ac{LVDS} pulses. 
+These \ac{LVDS} pulses are then converted to \ac{TTL} pulses before being routed to a programmable counting board (PXI-7813R model from National Instruments in Austin, TX). 
+This board provides 12.5~ns resolution for time-stamping and assigns a unique channel ID to each pulse. 
+The LabVIEW code that programs the \ac{FPGA} module is accessible in the \texttt{Multichannel-Timestamper} online repository~\href{https://github.com/multispot-software/MultichannelTimestamper}{repository}.
+
+The specific acquisition board employed in this work is no longer in production, but it may still be obtainable from third-party vendors. 
+As an alternative, consider one of the PXI-78XYR boards (where X = 3, 4, or 5, and Y = 1, 2, 3, or 4) which offer 96 digital inputs and feature higher-performance \ac{FPGA}s.

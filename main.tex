@@ -1,0 +1,192 @@
+% University of Michigan Dissertation LaTeX Template for 2023
+% Created by John Meluso and Shreyas Kousik
+% 9 Jul 2020
+
+% Use the University of Michigan thesis class.
+\documentclass[thesis]{thesis-umich}
+\input{packages}
+
+%--- Set the font styles -----
+% As of this writing, Rackham does not have strict font requirements, but they
+% suggest "standard fonts" such as Times, Arial, or Times New Roman.
+% In practice, they allow the default LaTeX font (Computer Modern).
+% The fonts available to you depend on the typesetting engine you use, e.g.
+% pdflatex (the overleaf default), xelatex, or lualatex.
+% Set the font to whatever you like, as long as it's compatible with the tex
+% engine you're using.
+% More information from Overleaf on font selection with:
+%     - pdflatex: https://www.overleaf.com/learn/latex/Font_typefaces
+%     - xelatex: https://www.overleaf.com/learn/latex/XeLaTeX
+% See examples below depending on your engine and uncomment the usepackage
+% commands and any subsequent commands as needed.
+%-------------------------------------------------------------------------------
+%--- pdflatex -----
+%\usepackage{times}
+%\usepackage{newtxtext}
+%\usepackage{newtxmath}
+%-------------------------------------------------------------------------------
+%--- xelatex / lualatex -----
+%\usepackage{fontspec}
+%\setromanfont{Times New Roman}
+%\setsansfont{Arial}
+%\setmonofont{Courier New}
+%-------------------------------------------------------------------------------
+
+% If you are using the alpha bibliography style, keep these next three lines in your preamble, so that the references are left-aligned; or, you can comment it out and see what happens
+\makeatletter
+\renewcommand{\@biblabel}[1]{[#1]\hfill}
+\makeatother
+
+% Title of the thesis
+\title{Methods development toward non-equilibrium studies
+of transcription initiation by \textit{E. coli} RNA Polymerase}
+
+% Author name
+\author{Maya A. Segal}
+
+% Department
+%\department{Chemistry}
+
+% Year of completion
+\year=2023
+
+% Author email
+\email{mayasegala@gmail.com}
+
+% Author ORCID iD
+\orcid{0000-0002-1828-7682}
+
+% Frontispiece
+% if you want to add a frontispiece, add an image named `frontispiece.png1
+%\frontispiece{\includegraphics[width=4in]{front_materials/frontispiece.png}}
+
+% Default style for front pages
+\frontpagestyle{7} % 7 is preferred by Rackham, but should be set individually for each front page
+
+% Dedication (the input [7] determines the style -- 7 is Rackham's preferred style)
+% \hidededication{%
+\dedication[7]{\input{front_materials/dedication}}
+
+% Acknowledgments (the input [7] determines the style -- 7 is Rackham's preferred style)
+\acknowledgments[7]{\input{front_materials/acknowledgments}}
+
+% Vita
+\vita[7]{\input{front_materials/vita}}
+
+% Committee
+\committee{ %
+Professor Shimon S. Weiss, Chair \\
+Professor Justin R. Caram \\
+Professor William M. Gelbart \\
+Professor Charles M. Knobler \\
+}
+
+% Chair must be entered separately for formatting reasons.
+\chair{Professor Shimon S. Weiss}
+%\cochair{Co-chair One \& Co-chair Two}
+
+% Commands to hide or show lists of figures, tables, etc.
+% To hide a list, change the word "show" in the command to "hide".
+%\showlistoftables
+\showlistofprograms
+\showlistofappendices
+\showlistofacronyms
+
+
+% Definition of any acronyms used.
+% To add an acronym, add an \acro{}{} command on a new line within the \acronyms{} command. For \acro, field 1 is the acronym and field 2 is the corresponding expression. For example: \acro{TLA}{Three Letter Acronym}.
+\acronyms{
+    \acro{FRET}{Fluorescence Resonance Energy Transfer}
+    \acro{PAX}{Periodic Acceptor Excitation}
+    \acro{E. coli}{Escherichia coli}
+    \acro{RNAP}{RNA Polymerase}
+    \acro{mRNA}{messenger RNA}
+    \acro{$RP_c$}{RNAP closed complex}
+    \acro{$RP_o$}{RNAP open bubble complex}
+    \acro{$RP_{ITC}$}{RNAP initial transcription complex}
+    \acro{BOIs}{bubble opening intermediates}
+    \acro{PBIIs}{paused-backtracked initiation intermediates}
+    \acro{TS}{template strand}
+    \acro{NTS}{non-template strand}
+    \acro{dsDNA}{duble-stranded DNA}
+    \acro{lacCONS}{\textit{lac} consensus sequence}
+    \acro{bp}{base pair(s)}
+    \acro{PDB}{Protein Data Bank}
+    \acro{NTP}{ribonucleoside triphosphate}
+    \acro{DPBB}{double$-\psi-\beta-$barrel}
+    \acro{FRET}{Fluorescence Resonance Energy Transfer}
+    \acro{smFRET}{single-molecule FRET}
+    \acro{ALEX}{Alternating Laser Excitation}
+    \acro{FAMS}{Fluorescence Aided Molecular Sorting}
+    \acro{TIRF}{Total Internal Reflection Fluorescence} 
+    \acro{STED}{Stimulated Emission Depletion}
+    \acro{SMLM}{Single Molecule Localization Microscopy}
+    \acro{FLIM}{Fluorescence Lifetime Imaging Microscopy}
+    \acro{TCSPC}{Time-Correlated Single-Photon Counting}
+    \acro{FCS}{Fluorescence Correlation Spectroscopy}
+    \acro{FCCS}{Fluorescence Cross-Correlation Spectroscopy}
+    \acro{CW}{continuous-wave}
+    \acro{SPAD}{Single Photon Avalanche Diode}
+    \acro{AOM}{Acousto-optic Modulator}
+    \acro{nsALEX}{nanosecond ALEX}
+    \acro{PIE}{Periodic Interleaved Excitation}
+    \acro{POLIMI}{Politecnico di Milano}
+    \acro{iAQC}{integrated active quenching circuit}
+    \acro{CMOS}{Complementary Metal Oxide Semiconductor}
+    \acro{MVUE}{Minimum Variance Unbiased Estimator}
+    \acro{DCR}{dark count rate}
+    \acro{LCOS-SLM}{liquid crystal on silicon spatial light modulator}
+    \acro{NA}{numerical aperture}
+    \acro{FPGA}{field-programmable gate array}
+    \acro{TTL}{transistor-transistor logic}
+    \acro{NIM}{nuclear instrumentation module}
+    \acro{BNC}{Bayonet Neill–Concelman}
+    \acro{LVDS}{low-voltage differential signaling}
+    \acro{TACs}{time-to-amplitude converters}
+    \acro{MLE}{Maximum Likelihood Estimator}
+    \acro{PSF}{Point Spread Function}
+    \acro{SBR}{signal-to-background rate}
+    \acro{APBS}{all-photon burst search}
+    \acro{DCBS}{dual-channel burst search}
+    \acro{HT-smFRET}{high-throughput smFRET}
+    \acro{HT-FCS}{high-throughput fluorescence correlation spectroscopy}
+    \acro{PDE}{photon detection efficiency}
+    \acro{ACF}{autocorrelation function}
+    \acro{CCF}{cross-correlation function}
+    \acro{PCR}{polymerase chain reaction}
+    \acro{wt-rpoD}{wildtype $\sigma^{70}$ gene}
+    \acro{ITS}{initial transcription sequence}
+    \acro{ssDNA}{single stranded DNA}
+    \acro{PDMS}{polydimethylsiloxane}
+}
+
+% Some abstract text
+\abstract{
+\input{front_materials/abstract}
+}
+%\hideabstractpagenumber
+
+%% DOCUMENT AREA
+\begin{document}
+
+% Place your chapters here using the \input{} command
+\input{chapters/chpt_1-RNAP}
+\input{chapters/chpt_2-smFRET}
+\input{chapters/chpt_3-HT-smFRET}
+\input{chapters/chpt_4-Applications_of_HT-smFRET}
+\input{chapters/chpt_5-promoter_escape_experiments}
+\input{chapters/chpt_6-conclusion}
+
+% Appendices
+\appendix
+\input{appendices/appendix_1}
+\input{appendices/appendix_2}
+\input{appendices/appendix_3}
+
+% citations in ACS style using achemso package
+%\bibliographystyle{plain}
+
+% Give this command the relative path to the .bib file.
+\bibliography{bib.bib}
+
+\end{document}
