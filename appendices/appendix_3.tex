@@ -34,15 +34,15 @@ While, during the acceptor excitation period, only the acceptor channel histogra
     $\overline{t_i}$ histograms in ALEX excitation periods.
     The red and green bands indicate the alternation periods in timestamp units.
     The alternation period is $50~\mu$s.
-    Timestamps detected in the donor channel during donor excitation ($D_{ex}D_{em}$, i.e. $D$-only excitation) occur during the 2200-3900 period.
-    Timestamps detected in the acceptor channel during donor excitation ($D_{ex}A_{em}$, i.e. acceptor fluorescence due to FRET) also occur during the 2200-3900 period.
-    Timestamps detected in the acceptor channel during acceptor excitation ($A_{ex}A_{em}$, i.e. $A$-only excitation) occur during the 250-1900 period.
+    Timestamps detected in the donor channel during donor excitation ($D_{ex}D_{em}$, \textit{i.e.} $D$-only excitation) occur during the 2200-3900 period.
+    Timestamps detected in the acceptor channel during donor excitation ($D_{ex}A_{em}$, \textit{i.e.} acceptor fluorescence due to FRET) also occur during the 2200-3900 period.
+    Timestamps detected in the acceptor channel during acceptor excitation ($A_{ex}A_{em}$, \textit{i.e.} $A$-only excitation) occur during the 250-1900 period.
     Timestamps detected in the donor channel during acceptor excitation are ($A_{ex}A_{em}$) are labeled in grey.
     Note that $A_{ex}A_{em}$ photons and photons with timestamps in the transition periods, not highlighted by green and red bands, are discarded in subsequent analyses.
     }
 \end{figure}
 
-In the context of \ac{PAX}, both the donor and acceptor channel histograms manifest considerable photon counts throughout both the $D$ and $DA$ excitation periods.
+In the context of \ac{PAX}, the donor and acceptor channel histograms manifest considerable photon counts throughout both $D$ and $DA$ excitation periods.
 
 This disparity between the \ac{ALEX} and \ac{PAX} configurations yields distinct definitions for several quantities outlined in subsequent sections.
 
@@ -112,10 +112,10 @@ acceptor channel and $Dir$ is the contribution of direct
 excitation of the acceptor dye by the green laser. 
 % The correction factors used to compute these quantities are defined in Section~\ref{}.
 
-In PAX, the $\overline{F}_{DA_{ex}D_{em}}$ photon stream 
+In \ac{PAX}, the $\overline{F}_{DA_{ex}D_{em}}$ photon stream 
 also contributes information, resulting in improved photon counting statistics
 compared to \ac{ALEX}. 
-The PAX-specific definition of the corrected fluorescence emission
+The \ac{PAX}-specific definition of the corrected fluorescence emission
 during donor excitation is given by:
 
 \begin{equation}
@@ -135,11 +135,11 @@ The multiplication by $\alpha^{-1}$ considers the continuous donor excitation, t
 \section{Background rate estimation}
 \label{sec:background_rate_apdx}
 
-Background correction, is easily performed using the open-source FRETBursts software~\cite{ingargiola_PLOS1_2016}.
+Background correction is easily performed using the open-source FRETBursts software~\cite{ingargiola_PLOS1_2016}.
 
 In single-molecule fluorescence experiments, sources contributing to background signal mainly arise from Raleigh and Raman scattering, scattered or out-of-focus fluorescence, sample or buffer impurities, and detector noise (including \ac{DCR}, crosstalk, or afterpulsing effects). 
 Effective mitigation of Raleigh and Raman scattering can be achieved with suitable optical filters. 
-Although complete elimination of sample impurities is challenging, impurities can be reduced through the use of spectroscopic-grade reagents and buffer filtration.
+Although the complete elimination of sample impurities is challenging, impurities can be reduced through the use of spectroscopic-grade reagents and buffer filtration.
 
 Precise estimation of the background rate demands careful consideration. Instead of relying on a buffer-only sample as background, the background rate must be calculated for each measurement to account for scattering, out-of-focus fluorescent molecules, and potential fluctuations during measurements. 
 One strategy for background rate estimation involves computing the inter-photon delay distribution, $\varphi(\tau)$, for each photon stream. 
@@ -214,12 +214,12 @@ Commonly adopted values for $m$ range from 5 to 15 photons.
 Notably, $m$ also establishes the minimum burst size.
 
 Two approaches can be employed to establish the threshold rate, i) a constant threshold can be defined, or ii) an adaptive moving threshold can be implemented.
-Setting a constant threshold for the burst search is common, however this does not account for changes in the background over time.
+Setting a constant threshold for the burst search is common, however, this does not account for changes in the background over time.
 Opting for an adaptive threshold effectively accommodates potential fluctuations in background levels over time. 
 In this case, the threshold is determined proportionally (using a factor denoted as $F$) to the local background rate. 
 Generally, typically $F$ ranges between 5 and 10. 
 This approach establishes the minimal \ac{SBR} as $(F - 1)$~\cite{michalet_PRSB_2012}.
-A comprehensive comparison of the two threshold selection methods is discussed the in the original FRETBursts publication~\cite{ingargiola_PLOS1_2016}.
+A comprehensive comparison of the two threshold selection methods is discussed in the original FRETBursts publication~\cite{ingargiola_PLOS1_2016}.
 
 Typical burst searches are:
 \begin{itemize}
@@ -241,7 +241,7 @@ For instance:
 
 Both FRETBursts and ALiX offer the flexibility to execute burst searches based on arbitrary logical combinations of photon streams. While numerous options are available, it is often advantageous to begin an analysis by using the \ac{APBS} method, followed by burst selection, a topic explored in Section~\ref{sec:burst_selection_apdx}.
 
-Within this study, burst searches for multispot data were conducted independently for each individual spot. A uniform burst selection threshold was applied to all photons (using \ac{APBS}), and further selections were subsequently applied.
+Within this study, burst searches for multispot data were conducted independently for each spot. A uniform burst selection threshold was applied to all photons (using \ac{APBS}), and further selections were subsequently applied.
 
 A comprehensive assessment of the impact of various burst search methodologies on burst statistics is detailed in the original FRETBursts publication~\cite{ingargiola_PLOS1_2016}.
 
@@ -273,7 +273,7 @@ For instance, in the context of \ac{PAX}, an extra burst selection based on the 
 \label{sec:ratiometric_E_S_apdx}
 
 The following subsections outline definitions for the uncorrected values of FRET efficiency ($E_{PR}$) and stoichiometry ($S$), and the corresponding corrected values for FRET efficiency ($E$) and stoichiometry ($S_{\gamma\beta}$).
-In addition, the differences for the values with respect to the \ac{ALEX} and \ac{PAX} excitation schemes are highlighted.
+In addition, the differences in the values for the \ac{ALEX} and \ac{PAX} excitation schemes are highlighted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Proximity ratio, $E_{PR}$}
@@ -281,7 +281,7 @@ In addition, the differences for the values with respect to the \ac{ALEX} and \a
 
 The ratiometric definition of FRET efficiency varies depending on the specific technique used, primarily relying on the available photon streams. Calculating it accurately can be a complex task, involving considerations such as quantum yield, detection efficiencies, absorption cross-section, and more.
 
-However, in many instances, an approximate value, which does not correct for the these factors, is sufficient for distinguishing between different sub-species and quantifying changes. 
+However, in many instances, an approximate value, which does not correct for these factors, is sufficient for distinguishing between different sub-species and quantifying changes. 
 This simplified value is commonly referred to as the \enquote{proximity ratio.}
 
 The proximity ratio, denoted as $E_{PR}$, can be calculated using background-corrected burst sizes, $\overline{F}$, with the following expression:
@@ -305,13 +305,13 @@ The stoichiometry ratio separates different molecular species in single-molecule
 \begin{itemize}
     \item A stoichiometry ratio of $S = 0$ signifies acceptor-only species.
     \item A ratio of $S = 1$ indicates donor-only species.
-    \item Doubly-labeled molecules with active dyes, i.e., FRET species, typically exhibit a stoichiometry ratio around $S \approx 1/2$.
+    \item Doubly-labeled molecules with active dyes, \textit{i.e.}, FRET species, typically exhibit a stoichiometry ratio around $S \approx 1/2$.
 \end{itemize}
 
 Similar to the proximity ratio, a fully corrected stoichiometry ratio, denoted as $S_{\gamma\beta}$, can be defined in both \ac{ALEX} and \ac{PAX}~\cite{lee_BPJ_2005,ingargiola_JCP_2018}. 
 However, a simpler uncorrected stoichiometry ratio, represented as $S$, can be calculated using the background-corrected burst sizes.
 
-The following expressions allow the calculation of stoichiometry ratios without the need for complex corrections, and reduces error propagation by implementing fewer mathematical steps. 
+The following expressions allow the calculation of stoichiometry ratios without the need for complex corrections and reduces error propagation by implementing fewer mathematical steps. 
 
 For \ac{ALEX}, the uncorrected stoichiometry ratio, $S$, is given by:
 
@@ -351,11 +351,11 @@ S_u = \frac{\overline{F}_{D}}{\overline{F}_{D}+\overline{F}_{DA_{ex}A_{em}}}
 \noindent
 This expression differs from Eqn.~\ref{eqn:Spax} by omitting subtraction of the $\frac{\omega_A}{\omega_D} \overline{F}_{D_{ex}A_{em}}$ term.
 
-Using $S_u$ over $S$ yields in a lower variance for small bursts. 
+Using $S_u$ over $S$ yields a lower variance for small bursts. 
 Consequently, it can provide improved separation between sub-populations. 
-However, it's important to consider that $S_u$ depends on the FRET efficiency, with $S_u$ decreasing as $E$ increases. 
+However, it is important to consider that $S_u$ depends on the FRET efficiency, with $S_u$ decreasing as $E$ increases. 
 This dependence on FRET efficiency could potentially affect the separation of sub-populations, particularly for species with low FRET efficiency~\cite{ingargiola_JCP_2018}.
-Thus, use of $S_u$ should be reserved for situations in which the FRET efficiencies of populations are sufficiently separated.
+Thus, the use of $S_u$ should be reserved for situations in which the FRET efficiencies of populations are sufficiently separated.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Corrected FRET efficiency, $E$}
@@ -373,7 +373,7 @@ The definition of $\gamma$ is as follows~\cite{lee_BPJ_2005}:
 \noindent
 where $\phi_A$ and $\phi_D$ are the quantum yields of the acceptor and donor, and $\eta^{A_{em}}_{A_{det}}$ and $\eta^{D_{em}}_{D_{det}}$ are the detection efficiencies in the acceptor and donor detectors. 
 
-Furthermore, a second correction factor, denoted as $\beta$, is introduced to consider variations in the donor and acceptor excitation rates at their respective excitation wavelengths. 
+Furthermore, a second correction factor denoted as $\beta$, is introduced to consider variations in the donor and acceptor excitation rates at their respective excitation wavelengths. 
 The definition of $\beta$ is as follows~\cite{lee_BPJ_2005}:
 
 \begin{equation}
@@ -438,7 +438,7 @@ The 2-dimensional $E - S$ histogram, more specifically the $E_{PR}-S$ or $E_{PR}
 These projections are useful for providing clearer visualizations and quantification of the distributions of $E_{PR}$ and $S$ (or $S_u$).
 
 The quantitative analysis of these histograms remains a subject of ongoing debate, primarily because burst search parameters have a complex impact on these histograms. 
-The most rigorous approach involves using the information from each individual burst to compare observed and predicted histograms. 
+The most rigorous approach involves using the information from each burst to compare observed and predicted histograms. 
 This is achieved through advanced modeling of various experimental effects inherent in the measurement process, such as shot noise analysis~\cite{nir_JPCB_2006,ingargiola_PLOS1_2016} or photon distribution analysis~\cite{antonik_JPCB_2006}.
 
 For a basic estimation of sub-populations and characteristic values of $E_{PR}$, $S$, or $S_u$ for these populations, fitting the observed histograms with an \textit{ad-hoc} model that provides a qualitative description is suitable.
@@ -485,7 +485,7 @@ where $\delta x$ is the histogram bin width.
 To perform accurate \ac{smFRET} analysis, it is necessary to include 
 % define \alpha? 
 several correction factors denoted as $l$, $d$, $\beta$, and $\gamma$~\cite{lee_BPJ_2005}.
-The $\gamma$ and $\beta$ factors have been defined in Section~\ref{sec:ratiometric_E_S_apdx}, and will therefore be omitted from this section.
+The $\gamma$ and $\beta$ factors have been defined in Section~\ref{sec:ratiometric_E_S_apdx} and will therefore be omitted from this section.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Donor leakage factor, $l$}
@@ -499,7 +499,7 @@ Lk = l F_{D_{ex}}^{A_{em}}
 \end{equation}
 
 \noindent
-where $l$ is the donor leakage coefficient, and is defined as~\cite{lee_BPJ_2005}:
+where $l$ is the donor leakage coefficient, defined as~\cite{lee_BPJ_2005}:
 
 \begin{equation}
     \label{eqn:l}
@@ -554,7 +554,7 @@ Spot-specific corrections are presented in the original 48-spot publication~\cit
 \section{Burst statistics}
 \label{sec:burst_stats_apdx}
 
-Burst analysis is applicable for quantifying not only $E$ and $S$ but also various other parameters related to concentration, diffusivity, brightness, and more. 
+Burst analysis is applicable for quantifying $E$, $S$, and various other parameters related to concentration, diffusivity, brightness, and more. 
 The subsequent subsections will provide detailed explanations of burst statistics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -570,31 +570,31 @@ In situations involving multispot data acquisition, this analysis yields a serie
 \centering
 \includegraphics[width=\textwidth]{chapters/figures/flow_burst_size_48_spots.jpg}
 \caption{\label{fig:flow_burst_size_48_spots}
-Burst size histograms of all photons streams for each spot in the \ac{HT-smFRET} microfluidic experiment discussed in Section~\ref{sec:smFRET_microfluidics}. 
+Burst size histograms of all photon streams for each spot in the \ac{HT-smFRET} microfluidic experiment discussed in Section~\ref{sec:smFRET_microfluidics}. 
 Analysis parameters: \ac{APBS}, $m = 10$, $r_m \geq 80~kHz$,
 $\overline{F} \geq 64$. 
-Spot 1 is at the top left, spot 12 at the top right. 
+Spot 1 is at the top left, and spot 12 is at the top right. 
 Spot 13 and 14 are missing from this series,
 due to a malfunction of two SPADs in the donor SPAD array. 
 The better illumination of the center spots translates into larger burst statistics.
-Details of the analysis can be found in \texttt{ALiX Notebook, Flow, \ac{APBS}, m= 10, Rmin = 80 kHz, Smin = 64.rtf} and associated files in the Figshare repository~\cite{figshare_repo_2019}. 
+Details of the analysis can be found in \texttt{ALiX Notebook, Flow, \ac{APBS}, m= 10, Rmin = 80 kHz, Smin = 64} and associated files in the Figshare repository~\cite{figshare_repo_2019}. 
 Figure reprinted from Segal, \textit{et al.}~\cite{segal_methods_2019}.
 }
 \end{figure}
 
 When the characteristics of different spots are comparable, it is reasonable to combine this data into a unified histogram. 
-This approach is illustrated in Fig.~\ref{fig:pooled_burst_size_distributions}, facilitating comparisons between datasets acquired under identical conditions or to assess the impact of various burst search parameters on the burst size distribution.
+This approach is illustrated in Fig.~\ref{fig:pooled_burst_size_distributions}, facilitating comparisons between datasets acquired under identical conditions or assessing the impact of various burst search parameters on the burst size distribution.
 
 \begin{figure}
 \centering\includegraphics[width=0.7\textwidth]{chapters/figures/pooled_burst_size_distributions.jpg}
 \caption{\label{fig:pooled_burst_size_distributions}
 Pooled burst size histograms corresponding to the two datasets discussed in section \ref{sec:smFRET_microfluidics}. 
 The diffusion only (no flow or \enquote{NF}) dataset, recorded with lower excitation powers (by a factor $\sim1.6$), was analyzed with a lower rate threshold ($r_m \geq 50~kHz$) for burst search and a lower burst size threshold ($\overline{F} \geq 40$, black)
-for burst selection, than the dataset recorded with flow (F, red), for which $r_m \geq 80~kHz = 50 \times 1.6, \overline{F} \geq 64 = 40 \times 1.6$, in order to obtain comparable number of bursts for analysis.
-For comparison, burst size distributions obtained when using the larger rate threshold for the no flow sample ($r_m \geq 80~kHz$,  NF, gray), or the lower burst size threshold for the sample with flow ($\overline{F} \geq 40$, F, orange) are represented as dashed curves. The red curve corresponds to the sum of all histograms in
+for burst selection, than the dataset recorded with flow (F, red), for which $r_m \geq 80~kHz = 50 \times 1.6, \overline{F} \geq 64 = 40 \times 1.6$, to obtain a comparable number of bursts for analysis.
+For comparison, burst size distributions were obtained when using the larger rate threshold for the no-flow sample ($r_m \geq 80~kHz$,  NF, gray), or the lower burst size threshold for the sample with flow ($\overline{F} \geq 40$, F, orange) are represented as dashed curves. The red curve corresponds to the sum of all histograms in
 Figure~\ref{fig:flow_burst_size_48_spots}.
 The higher excitation powers used in the flow measurement more than compensate for the shorter transit time of molecules and more stringent burst search and selection criteria, as can be seen from the larger number and larger sizes of the collected bursts.
-Details of the analysis can be found in the different notebooks: \texttt{ALiX Notebook, XX, \ac{APBS}, m = 10, Rmin = YY kHz, Smin = ZZ.rtf} where XX = Flow or No Flow, YY = 50 or 80, ZZ = 40 or 64, and associated files in the Figshare repository~\cite{figshare_repo_2019}. 
+Details of the analysis can be found in the different notebooks: \texttt{ALiX Notebook, XX, \ac{APBS}, m = 10, Rmin = YY kHz, Smin = ZZ} where XX = Flow or No Flow, YY = 50 or 80, ZZ = 40 or 64, and associated files in the Figshare repository~\cite{figshare_repo_2019}. 
 Figure reprinted from Segal, \textit{et al.}~\cite{segal_methods_2019}.
 }
 \end{figure}
@@ -618,29 +618,29 @@ An example of burst duration histograms obtained in the microfluidic \ac{HT-smFR
 \centering
 \includegraphics[width=\textwidth]{chapters/figures/flow_burst_duration_48_spots.jpg}
 \caption{\label{fig:flow_burst_duration_48_spots}
-Burst duration histograms in seconds for each spot in the \ac{smFRET} in flow experiment discussed
+Burst duration histograms in seconds for each spot in the \ac{smFRET} in the flow experiment discussed
 in Section~\ref{sec:smFRET_microfluidics}. 
 Analysis parameters: \ac{APBS}, $m = 10$, $r_m \geq 80~kHz$, $\overline{F} \geq 64$. 
-Spot 1 is at the top left, spot 12 at the top right. Spot 13 and 14 are missing from this series, due to a malfunction of two SPADs in the donor SPAD array. 
+Spot 1 is at the top left, and spot 12 is at the top right. Spot 13 and 14 are missing from this series, due to a malfunction of two SPADs in the donor SPAD array. 
 The better illumination of the center spots translates into larger burst statistics.
-Details of the analysis can be found in the notebook \texttt{ALiX Notebook, Flow, \ac{APBS}, m = 10, Rmin = 80 kHz, Smin = 64.rtf}  and associated files in the Figshare repository \cite{figshare_repo_2019}.
+Details of the analysis can be found in the notebook \texttt{ALiX Notebook, Flow, \ac{APBS}, m = 10, Rmin = 80 kHz, Smin = 64}  and associated files in the Figshare repository \cite{figshare_repo_2019}.
 Figure reprinted from Segal, \textit{et al.}~\cite{segal_methods_2019}
 }
 \end{figure}
 
 Similarly to burst sizes, if the characteristics of the spots are similar, it is reasonable to combine this data into a single histogram. 
-This approach, demonstrated in Fig.~\ref{fig:pooled_burst_duration}, allows for straightforward comparisons with data acquired under the same conditions.
+The approach demonstrated in Fig.~\ref{fig:pooled_burst_duration} allows for straightforward comparisons with data acquired under the same conditions.
 
 \begin{figure}
 \centering\includegraphics[width=0.7\textwidth]{chapters/figures/pooled_burst_duration.jpg}
 \caption{\label{fig:pooled_burst_duration}
 Pooled burst duration S \& S histograms corresponding to the two datasets discussed
 in section \ref{sec:smFRET_microfluidics}. 
-The diffusion only (no flow or NF) dataset, recorded with lower excitation powers (by a factor $\sim1.6$), was analyzed with a lower rate threshold ($r_m \geq 50~kHz$) for burst search and a lower burst size threshold ($\overline{F} \geq 40$, black) for burst selection, than the dataset recorded with flow (F, red), for which $r_m \geq 80~kHz = 50 \times 1.6, \overline{F} \geq 64 = 40 \times 1.6$, in order to obtain comparable number of bursts for analysis.
-For comparison, burst durations obtained when using the larger rate threshold for the no flow sample  ($r_m \geq 80~kHz$, NF, gray), or the lower burst size threshold for the sample with flow ($\overline{F} \geq 40$, F, orange) are represented as well. 
+The diffusion-only (no flow or NF) dataset, recorded with lower excitation powers (by a factor $\sim1.6$), was analyzed with a lower rate threshold ($r_m \geq 50~kHz$) for burst search and a lower burst size threshold ($\overline{F} \geq 40$, black) for burst selection, than the dataset recorded with flow (F, red), for which $r_m \geq 80~kHz = 50 \times 1.6, \overline{F} \geq 64 = 40 \times 1.6$, to obtain a comparable number of bursts for analysis.
+For comparison, burst durations obtained when using the larger rate threshold for the no-flow sample  ($r_m \geq 80~kHz$, NF, gray), or the lower burst size threshold for the sample with flow ($\overline{F} \geq 40$, F, orange) are represented as well. 
 The red curve corresponds to the sum of all histograms in Figure~\ref{fig:flow_burst_duration_48_spots}.
 The different burst search and selection criteria for each experiment result in different burst duration distributions, illustrating the challenges associated with this type of analysis.
-Details of the analysis can be found in the different notebooks: \texttt{ALiX Notebook, XX, \ac{APBS}, m = 10, Rmin = YY kHz, Smin = ZZ.rtf} where XX = Flow or No Flow, YY = 50 or 80, ZZ = 40 or 64, and associated files in the Figshare repository~\cite{figshare_repo_2019}).
+Details of the analysis can be found in the different notebooks: \texttt{ALiX Notebook, XX, \ac{APBS}, m = 10, Rmin = YY kHz, Smin = ZZ} where XX = Flow or No Flow, YY = 50 or 80, ZZ = 40 or 64, and associated files in the Figshare repository~\cite{figshare_repo_2019}).
 Figure reprinted from Segal, \textit{et al.}~\cite{segal_methods_2019}
 }
 \end{figure}
@@ -688,10 +688,10 @@ As with other burst statistics, the outcome of the analysis of a multispot datas
 \centering
 \includegraphics[width=\textwidth]{chapters/figures/flow_burst_peak_r_D_D_48_spots.jpg}
 \caption{\label{fig:flow_burst_peak_r_D_D_48_spots}
-Burst peak count rate histograms during the D-excitation period and in the donor channel for each spot in the microfludic \ac{HT-smFRET} experiment discussed in Section~\ref{sec:smFRET_microfluidics}.
+Burst peak count rate histograms during the D-excitation period and in the donor channel for each spot in the microfluidic \ac{HT-smFRET} experiment discussed in Section~\ref{sec:smFRET_microfluidics}.
 Analysis parameters: \ac{APBS}, $m = 10$, $r_m \geq 80~kHz$,
 $\overline{F} \geq 64$. 
-Spot 1 is at the top left, spot 12 at the top right. Spot 13 and 14 are missing from this series, due to a malfunction of two SPADs in the donor SPAD array. 
+Spot 1 is at the top left, and spot 12 is at the top right. Spot 13 and 14 are missing from this series, due to a malfunction of two SPADs in the donor SPAD array. 
 The better illumination of the center spots translates into larger number of bursts, but also larger peak burst rates.
 Details of the analysis can be found in the notebook \texttt{ALiX Notebook, Flow, \ac{APBS}, m = 10, Rmin = 80 kHz, Smin = 64.rtf} and associated files in the Figshare repository \cite{figshare_repo_2019}.
 Figure reprinted from Segal, \textit{et al.}~\cite{segal_methods_2019}.
@@ -699,18 +699,18 @@ Figure reprinted from Segal, \textit{et al.}~\cite{segal_methods_2019}.
 \end{figure}
 
 Pooling the burst peak count rates from all spots into a single histogram is useful for comparing different experiments, even if some border spots exhibit fewer and dimmer bursts, as can be seen from an examination of the spot intensity pattern shown in Fig.~\ref{fig:setup}. 
-This pooled peak count rates are presented in Fig.~\ref{fig:pooled_burst_peak_r_D_D}.
+These pooled peak count rates are presented in Fig.~\ref{fig:pooled_burst_peak_r_D_D}.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{chapters/figures/pooled_burst_peak_r_D_D.jpg}
 \caption{\label{fig:pooled_burst_peak_r_D_D}
 Pooled burst peak count rate histograms during the D-excitation period and in the donor channel corresponding to the two datasets discussed in section \ref{sec:smFRET_microfluidics}.
-The diffusion only (no flow or NF) dataset, recorded with lower excitation powers (by a factor $\sim1.6$), was analyzed with a lower rate threshold ($r_m \geq 50~kHz$) for burst search and a lower burst size threshold ($\overline{F} \geq 40$, black) for burst selection, than the dataset recorded with flow (F, red), for which $r_m \geq 80~kHz = 50 \times 1.6, \overline{F} \geq 64 = 40 \times 1.6$, in order to obtain comparable number of bursts for analysis.
-For comparison, burst size distributions obtained when using the larger rate threshold for the no flow sample  ($r_m \geq 80~kHz$, NF, gray), or the lower burst size threshold for the sample with flow ($\overline{F} \geq 40$, F, orange) are represented as dashed curves. 
+The diffusion-only (no flow or NF) dataset, recorded with lower excitation powers (by a factor $\sim1.6$), was analyzed with a lower rate threshold ($r_m \geq 50~kHz$) for burst search and a lower burst size threshold ($\overline{F} \geq 40$, black) for burst selection, than the dataset recorded with flow (F, red), for which $r_m \geq 80~kHz = 50 \times 1.6, \overline{F} \geq 64 = 40 \times 1.6$, to obtain comparable number of bursts for analysis.
+For comparison, burst size distributions were obtained when using the larger rate threshold for the no-flow sample  ($r_m \geq 80~kHz$, NF, gray), or the lower burst size threshold for the sample with flow ($\overline{F} \geq 40$, F, orange) are represented as dashed curves. 
 The red curve corresponds to the sum of all histograms in
 Figure \ref{fig:flow_burst_peak_r_D_D_48_spots}.
-As argued in the text, the asymptotic part of the burst peak count rate distribution is insensitive to the exact burst search and selection parameters used in the analysis, as is clear from the overlap of the exponential tails of the two no flow (NF, black and gray) and the two flow (F, red and orange) curves.
+As argued in the text, the asymptotic part of the burst peak count rate distribution is insensitive to the exact burst search and selection parameters used in the analysis, as is clear from the overlap of the exponential tails of the two no-flow (NF, black and gray) and the two flow (F, red and orange) curves.
 The ratio of the two exponential coefficients (F: 216 kHz and NF: 116 kHz, $F/NF = 1.9$) is approximately equal to the ratio of the donor laser  excitation powers used in the two measurements ($500/300 = 1.7$), as expected.
 Details of the analysis can be found in the different notebooks:
 \texttt{ALiX Notebook, XX, \ac{APBS}, m = 10, Rmin = YY kHz, Smin = ZZ.rtf} where XX = Flow or No Flow, YY = 50 or 80, ZZ = 40 or 64, and associated files in the Figshare repository~\cite{figshare_repo_2019}.
@@ -721,13 +721,13 @@ Figure reprinted from Segal, \textit{et al.}~\cite{segal_methods_2019}.
 \section{Fluorescence Correlation Analysis}
 \label{sec:fcs_analysis_apdx}
 
-\ac{FCS} can be performed on single or multispot setups to characterize the excitation-detection volumes sampled by the donor and acceptor, determine diffusion coefficients, brightness, and, when sufficient statistics are available, it can be utilized to study short time-scale dynamics~\cite{krichevsky_RPP_2002}. 
+\ac{FCS} can be performed on single or multispot setups to characterize the excitation-detection volumes sampled by the donor and acceptor, determine diffusion coefficients, and brightness, and, when sufficient statistics are available, it can be utilized to study short time-scale dynamics~\cite{krichevsky_RPP_2002}. 
 In the case of multispot experiments, \ac{FCS} analysis is particularly helpful in detecting otherwise challenging-to-quantify differences in spot characteristics. 
 One of the simplest pieces of information that can be readily extracted from this analysis is the diffusion time through the excitation-detection volume, $\tau_D$, which is a useful indication of variations between spots.
 
 In previous studies, we have conducted comparisons of single and multispot setups using FCS analysis~\cite{colyer_BOE_2010,ingargiola_PLOS1_2016, ingargiola_JCP_2018}. 
 This analysis can be performed on the same dye, resulting in the \ac{ACF}, or on two different dyes, leading to the \ac{CCF}.
-\ac{CCF} analysis can also be performed using a single dye, as in the case of \ac{ACF}, however, these measurements require a optical beamsplitter for detection in two separate channels.
+\ac{CCF} analysis can also be performed using a single dye, as in the case of \ac{ACF}, however, these measurements require an optical beamsplitter for detection in two separate channels.
 \ac{FCS} analysis is complementary to burst duration and brightness analysis, as it can be used to reveal subtle differences in effective excitation-detection volumes or peak excitation intensities~\cite{ingargiola_PLOS1_2016}.
 
 Quantitative \ac{FCS} analysis can be affected by various experimental artifacts and may require simplifying assumptions that are not always met~\cite{hess_BJ_2002, enderlein_CPB_2004}. 
@@ -743,4 +743,4 @@ However, as demonstrated in Section~\ref{sec:microfluidics_CCF}, \ac{CCF} analys
 Additionally, by analyzing the average \ac{CCF} of all spots, enhanced statistical accuracy can be achieved, as illustrated in Fig.~\ref{fig:flow_analysis}. 
 
 Future iterations of a multispot setup might incorporate two \ac{SPAD} arrays per channel, enabling \ac{CCF} analysis within single spots and channels. 
-This advancement would provide access to short timescale dynamics. By appropriately accounting for spot-specific differences and averaging \ac{CCF} curves from multiple spots, the time required to accumulate sufficient statistics for studying short timescale dynamics could be significantly reduced~\cite{felekyan_RSI_2005}.
+This advancement would provide access to short-timescale dynamics. By appropriately accounting for spot-specific differences and averaging \ac{CCF} curves from multiple spots, the time required to accumulate sufficient statistics for studying short timescale dynamics could be significantly reduced~\cite{felekyan_RSI_2005}.

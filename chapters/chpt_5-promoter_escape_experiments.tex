@@ -2,8 +2,8 @@
 \label{chpt:towards_promoter-escape_movie}
 
 RNAP plays a pivotal role in gene regulation by catalyzing the transcription reaction, which results in the production of \ac{mRNA}, please refer to Sections~\ref{sec:rnap_intro} and \ref{sec:RNAP_cycle} for a detailed discussion. 
-Briefly, \ac{mRNA} serves as an important intermediary for protein synthesis, and ultimately influences the phenotype of the cell.
-As described previously, promoter escape is the the rate-limiting step in the process of transcription initiation~\cite{murakami_structural_2002}. 
+Briefly, \ac{mRNA} serves as an important intermediary for protein synthesis and ultimately influences the phenotype of the cell.
+As described previously, promoter escape is the rate-limiting step in the process of transcription initiation~\cite{murakami_structural_2002}. 
 Thus promoter escape acts as an important checkpoint in gene regulation.
 
 Moreover, bacterial \ac{RNAP} studies hold significant relevance in the broader scientific and medical community. 
@@ -14,7 +14,7 @@ By better understanding the intricacies of promoter escape, we can expand the ph
 
 The ability to investigate these dynamic processes at the single-molecule level, in real-time, is an exciting and lofty goal. 
 Current methods lack the temporal resolution needed to observe non-equilibrium structural changes as a function of time, especially in the context of processes like protein folding or rapid structural conformational changes. 
-The development of a \ac{HT-smFRET} platform for the purpose of time resolved, atomically accurate \enquote{movies} of such dynamic molecular processes, is a groundbreaking, albeit extremely challenging, endeavor.
+The development of a \ac{HT-smFRET} platform for time-resolved, atomically accurate \enquote{movies} of such dynamic molecular processes, is a groundbreaking, albeit extremely challenging, endeavor.
 
 In my thesis work, I have laid the foundation for such a platform, and I utilize the study of the \ac{RNAP} promoter escape mechanism as an illustrative example of this novel method which has broader application in the field of structural biology.
 The real-time, single-molecule approach being developed in this research represents a pioneering step towards achieving this goal.
@@ -23,7 +23,7 @@ The real-time, single-molecule approach being developed in this research represe
 \section{Experimental design for kinetic studies of promoter escape}
 \label{sec:promoter_escape_exp}
 
-The experimental approach for conducting freely-diffusing \ac{HT-smFRET} studies of \ac{RNAP} promoter escape involves several key steps:
+The experimental approach for conducting freely diffusing \ac{HT-smFRET} studies of \ac{RNAP} promoter escape involves several key steps:
 
 \begin{enumerate}
     \item Labeling strategy for \ac{HT-smFRET} studies of \ac{RNAP}
@@ -38,14 +38,14 @@ The ultimate objective is to advance our understanding of \enquote{basic} scienc
 \section{Generating a $\sigma^{70}$ mutant library}
 \label{sec:sigma70_library_exp}
 
-In order to use \ac{smFRET} to study any biological system, it is necessary to label the molecules of interested with fluorophores.
+To use \ac{smFRET} to study any biological system, it is necessary to label the molecules of interest with fluorophores.
 As fluorescent dyes are sufficiently small and bright, they more closely meet the condition of a point dipole approximation, where the size of the fluorophore is much smaller than $R$, as discussed in Section~\ref{sec:FRET_theory}.
 Thus, in comparison to fluorescent proteins or quantum dots, fluorescent dyes remain the ideal choice for labeling in the context of \ac{smFRET}.
 
 To perform \ac{smFRET} studies on promoter escape in \ac{E. coli} \ac{RNAP}, we developed a strategy for generating singly-labeled $\sigma^{70}$ constructs. 
 We targeted $\sigma^{70}$, as the removal of the $\sigma_{3.2}$ loop during promoter escape has yet to be observed. 
 To this end, I created a plasmid library, which would subsequently serve as the foundation for generating a protein library of single-cysteine $\sigma^{70}$ mutants. 
-The ultimate aim being to utilize this protein library to construct a comprehensive distance network, a concept that will be explored in greater detail in Section~\ref{sec:distance_network_exp}.
+The ultimate aim is to utilize this protein library to construct a comprehensive distance network, a concept that will be explored in greater detail in Section~\ref{sec:distance_network_exp}.
 
 To facilitate labeling using cysteine chemistry, we initiated the process by eliminating all native cysteine residues within the \ac{wt-rpoD} gene that codes for the $\sigma^{70}$ factor. 
 This was achieved using standard \ac{PCR} techniques for point mutagenesis, where every cysteine was systematically mutated into a serine. 
@@ -99,7 +99,7 @@ The heat-shocked TOP-10 cells can then uptake the pETpET28(+)-rpoD(+C) plasmids,
 
 The TOP-10 cells that contained the pET28(+)-rpoD(+C) plasmid were selected by growing them on LB agar plates containing kanamycin. 
 This step ensured that surviving TOP-10 colonies contained the rpoD(+C) insert, as indicated by the presence of the KanR gene. 
-The selected colonies were then grown up in LB medium containing kanamycin to further ensure that only the plasmid containing cells would be used in the next step. 
+The selected colonies were then grown up in an LB medium containing kanamycin to further ensure that only the plasmid-containing cells would be used in the next step. 
 The resulting pET28(+)-rpoD(+C) plasmids were extracted from the TOP-10 cells and purified through miniprep and subsequently sent for sequencing.
 Sequencing results were used to verify that the point mutation was carried out successfully. 
 The resulting plasmid library was then shared with collaborator Dr. Sergie Borukhov at Rowan University in New Jersey for protein overexpression, purification, and dye conjugation.
@@ -130,13 +130,13 @@ However, the unlabeled nascent RNA is not detectable in \ac{smFRET} experiments.
     \includegraphics[width=1.5\textwidth]{chapters/figures/ds-lacCONS-seq.jpg}
     \caption{\label{fig:ds-lacCONS_seq} 
     \ac{dsDNA} template sequence based on the \ac{lacCONS} promoter.
-    The non-template strand is presented in the 5' - 3' direction (blue), and the complementary template strand is presented the 3' - 5' direction (magenta).
+    The non-template strand is presented in the 5' - 3' direction (blue), and the complementary template strand is presented in the 3' - 5' direction (magenta).
     Top: lacCONS construct with an example acceptor dye (ATTO647N) labeled on the non-template strand at the -28 register, \textit{i.e.}, ($-28$NT). 
     The accessible volume of the dye is approximately to scale.
     Bottom: the \ac{ITS} of the wt-\ac{lacCONS} promoter was designed such that a partial set of \ac{NTP}s could be added and the transcription reaction could be stalled at specific points in the reaction, \textit{i.e.}, $RP_{ITC=2}$, $RP_{ITC=4}$, and $RP_{e}$ (nascent RNA transcripts indicated in red).
-    A full-set of \ac{NTP}s results in run-off (transcription of the complete sequence).
+    A full set of \ac{NTP}s results in run-off (transcription of the complete sequence).
     The full RNA transcript contains a 20dA sequence for binding to a 20dT \ac{ssDNA} labeled at each end with a donor and acceptor dye.
-    The -35 element (-35 $-$ -30) and the TATA box (-12 $-$ -7 ) are indicated black.
+    The -35 element (-35 $-$ -30) and the TATA box (-12 $-$ -7 ) are indicated in black.
     }
 \end{figure}
 
@@ -145,13 +145,13 @@ However, the unlabeled nascent RNA is not detectable in \ac{smFRET} experiments.
     \includegraphics[width=\textwidth]{chapters/figures/probe_binding_assay.jpg}
     \caption{\label{fig:probe-binding_assay} 
     Probe-binding assay.
-    A) After transcription is complete, the final product is a nascent RNA (grey worm-like chain). Note that the nascent RNA is unlabeled and therefor is not detectable in \ac{smFRET} experiments. 
-    When a \ac{ssDNA} 20dT FRET-probe is added to solution, it readily binds the 20~\ac{bp} poly-A tail of the nascent RNA. 
+    A) After transcription is complete, the final product is a nascent RNA (grey worm-like chain). Note that the nascent RNA is unlabeled and therefore is not detectable in \ac{smFRET} experiments. 
+    When a \ac{ssDNA} 20dT FRET-probe is added to the solution, it readily binds the 20~\ac{bp} poly-A tail of the nascent RNA. 
     B) FRET histograms for the probe-binding assay
-    The histogram on the left shows two distinct FRET populations in the absence of \ac{NTP}s, where the low-FRET populations corresponds to the bound 20dT FRET-probe, and the high-FRET populations corresponds to the unbound 20dT FRET-probe. 
+    The histogram on the left shows two distinct FRET populations in the absence of \ac{NTP}s, where the low-FRET populations correspond to the bound 20dT FRET-probe, and the high-FRET populations correspond to the unbound 20dT FRET-probe. 
     This result suggests that the transcription reaction did not go to completion. 
-    The histogram on the right shows the shift if FRET populations upon addition of a full set of \ac{NTP}s. 
-    The shift of the distributions (left-pointing black arrow) clearly indicates that nearly all of the FRET-probe is bound to nascent RNA from the completed transcription reaction.
+    The histogram on the right shows the shift of FRET populations upon addition of a full set of \ac{NTP}s. 
+    The shift of the distributions (left-pointing black arrow) indicates that nearly all of the FRET-probe is bound to nascent RNA from the completed transcription reaction.
     }
 \end{figure}
 
@@ -169,19 +169,19 @@ By performing this experiment both in the presence and absence of \ac{NTP}s we c
 Conventional structural determination methods offer only snapshots of molecules in motion, making them inadequate for capturing the dynamic behavior of complex enzymes like \ac{RNAP}.
 In addition, common methods such as crystallization or cryo-EM require non-native conditions, which may introduce artifacts when solving structures. 
 To overcome this limitation, we will utilize freely-diffusing \ac{RNAP} in conjunction with a new 32-spot \ac{HT-smFRET} setup, coupled with a rapid microfluidic mixer. 
-This new platform will enable us to observe the entire process of promoter escape in real-time, providing valuable insights into the enzyme's dynamic mechanisms.
+This new platform will enable us to observe the entire process of promoter escape in real time, providing valuable insights into the enzyme's dynamic mechanisms.
 
-FRET data is inherently sparse due to labeling position constraints~\cite{kalinin_NatMethods_2012, muschielok_NatMethods_2008}, as introduction of a bulky fluorescent dye may either not be possible or may interfere with a molecule's native function. 
-% In addition, making the comprehensive single-cysteine library is time consuming.
+FRET data is inherently sparse due to labeling position constraints~\cite{kalinin_NatMethods_2012, muschielok_NatMethods_2008}, as the introduction of a bulky fluorescent dye may either not be possible or may interfere with a molecule's native function. 
+% In addition, making the comprehensive single-cysteine library is time-consuming.
 % Together, these factors make it difficult to capture the full spectrum of structural details using \ac{smFRET} alone. 
-In order to overcome this limitation, structural determination using FRET distance measurement networks~\cite{hellenkamp_NatMethods_2017} can be augmented by integrating computer simulations.
+To overcome this limitation, structural determination using FRET distance measurement networks~\cite{hellenkamp_NatMethods_2017} can be augmented by integrating computer simulations.
 This combination of experimental and computational approaches provides a more comprehensive method for exploring biomolecular structures and enables access to microsecond timescale dynamics~\cite{lerner_Science_2018, dimura_COSB_2016, kilic_NatComm_2018, dimura_NatComm_2020}.
 
 In my thesis work, I have established the foundation for constructing a \ac{smFRET} distance network between the acceptor-labeled \ac{lacCONS} promoter library and the donor-labeled $\sigma^{70}$ library. 
 This involves systematic observations of the $\sigma^{70}$ mutants in relation to the library of singly-labeled \ac{dsDNA} \ac{lacCONS} promoters. 
 The data derived from these experiments will serve as constraints in molecular simulations~\cite{dimura_COSB_2016}, enabling detailed studies of the structural dynamics governing the interactions between \ac{RNAP} and DNA throughout the promoter escape process.
 For clarity, Figure~\ref{fig:distance_network}A illustrates a partial distance network for the $\sigma^{70}$-I511C construct and the template strand only. 
-The full distance network will involve many more distances derived from the $\sigma^{70}$ and \ac{dsDNA} libraries.
+The entire distance network will involve many more distances derived from the $\sigma^{70}$ and \ac{dsDNA} libraries.
 Table~\ref{tab:labeling_positions} shows all the possible labeling positions on the template and non-template strands of the \ac{lacCONS} promoter as well as the library of labeled $\sigma_{3.2}$ constructs.
 The total possible number of distances is then $78 \times 78 \times 9 = 54,759$.
 An example of a single distance measurement is presented in Figure~\ref{fig:distance_network}B, where an acceptor dye is labeled at the $-28$NT position and a donor dye is labeled on the $\sigma_{3.2}$-I511C construct. 
@@ -248,12 +248,12 @@ Only those complexes that successfully pass modeling and screening will contribu
 \label{se:controls_exp}
 
 Control experiments are an integral part of this approach, serving to validate and refine the \ac{HT-smFRET} methodology. 
-Notably, we perform these experiments on the single-spot $\mu$s\ac{ALEX} setup in order to ensure comparability between setups.
+Notably, we perform these experiments on the single-spot $\mu$s\ac{ALEX} setup to ensure comparability between setups.
 Two important control experiments must be carried out.
 First, the $\sigma^{70}$ constructs must be tested for transcriptional activity, and second, the acceptor-labeled \ac{lacCONS} promoters must be tested for compatibility with the active $\sigma^{70}$ constructs. 
 
 In the initial series of control experiments, I assessed the transcriptional activity of the $\sigma^{70}$ mutants using the previously described probe-binding assays. 
-A summary of the results of this screening for the nine constructs in the $\sigma^{70}$ library are presented in Figure~\ref{fig:mutant_screening} (constructs that did not pass the screening are not shown).
+A summary of the results of this screening for the nine constructs in the $\sigma^{70}$ library is presented in Figure~\ref{fig:mutant_screening} (constructs that did not pass the screening are not shown).
 In these experiments, we distinguished two populations based on their FRET signals. 
 The bound population, representing the low-FRET state, corresponds to the nascent RNA bound to the probe. 
 The unbound population, characterized by the high-FRET state, corresponds to the free probe. 
@@ -265,7 +265,7 @@ This observation underscores the sensitivity of the $\sigma_{3.2}$ loop and its 
 As we continue our investigations, we may explore additional positions in and around the $\sigma_{3.2}$ loop.
 
 In the second set of control experiments, we perform open-bubble experiments using a singly-labeled $\sigma^{70}$ that passed the first test with a singly-labeled \ac{lacCONS} promoter. 
-In these experiments we measure the changes in distance between \ac{RNAP} and the \ac{dsDNA} using a partial set of \ac{NTP}s as described in Section~\ref{sec:dsDNA_lib_exp}.
+In these experiments, we measure the changes in distance between \ac{RNAP} and the \ac{dsDNA} using a partial set of \ac{NTP}s as described in Section~\ref{sec:dsDNA_lib_exp}.
 If we observe normal behavior, these FRET pairs will be used in \ac{HT-smFRET} experiments on the new 32-spot platform for kinetic studies of the promoter escape reaction. 
 
 \begin{figure}
@@ -283,7 +283,7 @@ If we observe normal behavior, these FRET pairs will be used in \ac{HT-smFRET} e
 \section{Real-time kinetics of promoter escape using an improved HT-smFRET platform}
 \label{sec:HT-smFRET_of_txn_exp}
 
-Expanding on the concept of utilizing \ac{smFRET}-derived distances as constraints for molecular dynamics or coarse-grained simulations, we will incorporate distance constraints that evolve over time during a reaction.
+Expanding on the concept of utilizing \ac{smFRET}-derived distances as constraints for molecular dynamics or coarse-grained simulations, we will incorporate distance constraints that evolve during a reaction.
 These collections of both static structures and dynamic distance constraints will be incorporated into an energy cost function using a course-grained simulation framework. 
 The outcome will be the creation of 3D atomic-level structural dynamic representations, effectively capturing the dynamic behavior of these molecules as they perform their biological functions.
 
@@ -321,7 +321,7 @@ With this design, a mixing dead time of approximately 1~ms is achievable.
 Figure~\ref{fig:schuler_mixer}A shows scanning electron micrographs of the mixing (top) and observation (bottom) regions within the mixer. 
 A serpentine observation channel has been designed to accommodate a broad range of observation times and enable multifocal detection along the central channel using the linear 32-spot arrays, (bottom of Fig.~\ref{fig:schuler_mixer}A).
 
-To ensure the production of reliable devices with stable flow patterns and highly reproducible mixing behavior, the Schuler group emploed microfabrication techniques based on reactive ion etching in silicon to create precise device molds. 
+To ensure the production of reliable devices with stable flow patterns and highly reproducible mixing behavior, the Schuler group employed microfabrication techniques based on reactive ion etching in silicon to create precise device molds. 
 This precision is critical for achieving fast diffusive mixing in the narrow channels (2.5~$\mu$m). 
 The microfluidic devices are fabricated by filling the molds with \ac{PDMS} and bonding them to microscope cover glasses following plasma activation. 
 To control the flow rate, the device is securely held in place on the confocal setup using a cartridge holder. 

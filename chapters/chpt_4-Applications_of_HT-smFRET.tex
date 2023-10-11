@@ -2,26 +2,26 @@
 \label{chpt:HT-smFRET_applications}
 
 The potential of the \ac{HT-smFRET} setup is exciting, especially in the context of current \ac{smFRET} applications, which are typically only capable of equilibrium measurements.
-Here, I first describe equilibrium measurements performed on the 48-spot setup for the purpose of characterization of the new instrument.
-Then I present kinetic studies performed on the 8-spot setup to demonstrate the exciting possibilities of \ac{HT-smFRET} for non-equilibrium studies of freely-diffusing biological systems.
+Here, I first describe equilibrium measurements performed on the 48-spot setup for the characterization of the new instrument.
+Then I present kinetic studies performed on the 8-spot setup to demonstrate the exciting possibilities of \ac{HT-smFRET} for non-equilibrium studies of freely diffusing biological systems.
 Finally, I present the results of a proof of principle experiment where I incorporated a simple microfluidic device to the 48-spot setup and demonstrate \ac{HT-smFRET} on a flowing sample.
-Together, these works outline a pathway to achieving time-resolved \ac{smFRET} experiments on non-equilibrium systems, opening the exciting possibility of observing precise distances changes on entire kinetic trajectories.
+Together, these works outline a pathway to achieving time-resolved \ac{smFRET} experiments on non-equilibrium systems, opening the exciting possibility of observing precise distance changes on entire kinetic trajectories.
 
 \section{Equilibrium smFRET measurements}
 \label{sec:HT-smFRET_measurements}
 
-In order to characterize the 48-spot setup, I first performed equilibrium \ac{smFRET} measurements on doubly-labeled \ac{dsDNA}.
-The following section provides a detailed account of theses experiments and their analysis.
+To characterize the 48-spot setup, I first performed equilibrium \ac{smFRET} measurements on doubly-labeled \ac{dsDNA}.
+The following section provides a detailed account of these experiments and their analysis.
 
 \subsection{HT-smFRET-PAX of freely diffusing dsDNA}
 \label{sec:HT-smFRET_measurements_DNA}
 
-To showcase the enhanced throughput of the 48-spot smFRET-PAX setup, I initially conducted measurements using doubly-labeled \ac{dsDNA}. These samples were 40~\ac{bp}s long and were designed to be identical expect for the location of the dyes.  
+To showcase the enhanced throughput of the 48-spot smFRET-PAX setup, I initially conducted measurements using doubly-labeled \ac{dsDNA}. These samples were 40~\ac{bp}s long and were designed to be identical except for the location of the dyes.  
 Each sample was labeled with ATTO550 as the donor dye and ATTO647N as the acceptor dye, with different samples characterized by varying inter-dye distances, as explained in previous work~\cite{ingargiola_PLOS1_2016}. 
 In this study, I used two samples with inter-dye distances of 12~\ac{bp} and 22~\ac{bp}\cite{ingargiola_JCP_2018}. 
 The measurements were carried out on samples with a nominal concentration of 100 pM in TE 50 buffer, a minimal DNA storage buffer containing 10~mM Tris (pH = 8.0), 1~mM EDTA, and 50~mM NaCl. 
 First, I performed measurements using a standard single-spot \ac{ALEX} setup. 
-Then, I measured the exact same samples with the 48-spot PAX setup.
+Then, I measured the same samples with the 48-spot PAX setup.
 This approach ensured that the sample conditions were consistent for a meaningful comparison of the setup characteristics.
 
 \subsection{Burst search and selection}
@@ -36,7 +36,7 @@ A detailed explanation of each step can be found in the  Appendix~\ref{chpt:anal
 \item Burst selection
 \end{enumerate}
 
-To address potential background fluctuations, I estimated the background rate for each photon stream at each spot using a 10 second moving time window. 
+To address potential background fluctuations, I estimated the background rate for each photon stream at each spot using a 10-second moving time window. 
 Following this, I conducted an \ac{APBS} for each spot using the standard sliding window algorithm. 
 This approach involved defining the local total count rate based on 10 consecutive photons ($m=10$) and employing a fixed threshold to delineate burst start and end points (set at $50\times 10^{3}$ counts per second or 50~kHz).
 
@@ -62,7 +62,7 @@ We generated corresponding 2D histograms of $E_{PR}$ and $S$, or $S_u$, which fa
 \centering\includegraphics[width=1.0\linewidth]{chapters/figures/2017-05-23_08_12d_48spot_alex_hist_Su_all-bursts.png}
 \caption{\label{fig:48-spot_FRET_pop} $E_{PR} - S_u$ histograms for each 
 spot from a doubly-labeled \ac{dsDNA} sample with a 12~\ac{bp} inter-dye separation. 
-A burst search using all photons (\ac{APBS}) was preformed, with $m=10$ and a constant threshold of 50~kHz.
+A burst search using all photons (\ac{APBS}) was performed, with $m=10$ and a constant threshold of 50~kHz.
 After background correction, bursts were selected using a minimum burst size of 40~photons.
 The total number of bursts is indicated as $\#B$ at the bottom of each histogram.  
 The 12~\ac{bp} FRET population ($E_{PR} \approx 0.6, S_u \approx 0.6$) is isolated from donor-only or acceptor-only populations.
@@ -73,7 +73,7 @@ Figure reproduced from the original 48-spot publication~\cite{ingargiola_JCP_201
 }
 \end{figure}
 
-Accuracy of the multispot data analysis was verified by comparing the results obtained for each spot. 
+The accuracy of the multispot data analysis was verified by comparing the results obtained for each spot. 
 By applying a second burst selection criterion, $\overline{F}_{DA_{ex}A_{em}} > \text{min}$, we effectively eliminated the donor-only population and isolated the FRET subpopulations as visualized in Fig.~\ref{fig:48-spot_FRET_pop}. 
 
 Subsequently, fitting the burst distribution of these subpopulations with a 2D Gaussian enabled us to determine their center-of-mass and standard deviation. 
@@ -81,7 +81,7 @@ These parameters are depicted in Figure~\ref{fig:peak_Epr_S}A as blue dots and c
 The orange dot in Figure~\ref{fig:peak_Epr_S}A represents the average position of the FRET peak across all spots. 
 
 It is noteworthy that even without spot-specific corrections, the overall dispersion of these populations remains minimal.
-This is evident in scatterplot of the FRET population (blue pluses in Figure~\ref{fig:peak_Epr_S}B) and the donor-only population (orange crosses in Figure~\ref{fig:peak_Epr_S}B).
+This is evident in the scatterplot of the FRET population (blue pluses in Figure~\ref{fig:peak_Epr_S}B) and the donor-only population (orange crosses in Figure~\ref{fig:peak_Epr_S}B).
 
 \begin{figure}
 \centering\includegraphics[width=1.0\linewidth]{chapters/figures/Epr_Su_peaks.png} 
@@ -118,7 +118,7 @@ Figure adapted from the original 48-spot publication~\cite{ingargiola_JCP_2018}.
 
 Pooling the bursts from all spots yields a substantial number of bursts, enabling the application of stricter selection criteria, such as a larger minimum burst size, to retain only those bursts with a robust signal-to-noise ratio. 
 Furthermore, this data pooling allows for the extraction of sub-population information within a much shorter acquisition time compared to what could be achieved with a standard single-spot setup. 
-This efficiency is demonstrated in Figure~\ref{fig:pooled_comparison}, where we aquired 5~s of data on a single-spot \ac{ALEX} setup and the 48-spot \ac{PAX} setup.
+This efficiency is demonstrated in Figure~\ref{fig:pooled_comparison}, where we acquired 5~s of data on a single-spot \ac{ALEX} setup and the 48-spot \ac{PAX} setup.
 
 Pooling data from all 46 spots (with 2 \ac{SPAD}s being defective in one of the arrays) resulted in a 38-fold increase in the number of observed bursts compared to the single-spot experiment. 
 Notably, this 38-fold increase varies at different observation time points due to the stochastic nature of single-molecule transit through the excitation-detection spots and differences in the excitation-detection volumes and detection efficiencies between the two setups.
@@ -163,7 +163,7 @@ This process involves four critical steps:
 \begin{enumerate}
 \item Binding of the core \ac{RNAP} to the promoter specificity $\sigma$ factor, resulting in the formation of the \ac{RNAP} holoenzyme.
 \item Binding of the \ac{RNAP} holoenzyme to the DNA at the promoter sequence located upstream from the gene sequence. 
-Resulting in formation of the RNAP-promoter closed bubble, \ac{$RP_c$}, complex.
+Resulting in the formation of the RNAP-promoter closed bubble, \ac{$RP_c$}, complex.
 \item A series of events leading to the unwinding of approximately 10-12~\ac{bp}s of the \ac{dsDNA} promoter sequence, leading to the creation of the RNAP-promoter open bubble, \ac{$RP_o$}, complex.
 \item Initiation of RNA polymerization, which involves numerous unsuccessful attempts (abortive initiation). 
 Eventually, this leads to promoter escape and the transition to the elongation phase.
@@ -178,7 +178,7 @@ This process is referred to as termination and is depicted in Figure ~\ref{fig:R
 To investigate the kinetics of the transition from initiation to termination, we monitored the FRET efficiency between two labeled nucleotides located on opposite strands of DNA within the bubble region. 
 Specifically, we examined the changes in FRET between the template strand (donor-labeled with ATTO~550) and the non-template strand (acceptor-labeled with ATTO~647N).
 
-In the initiation stage, prior to the addition of \ac{NTP}s (i.e., the $RP_{ITC=2}$ stage), the dyes are separated, leading to a medium FRET efficiency. 
+In the initiation stage, before the addition of \ac{NTP}s (i.e., the $RP_{ITC=2}$ stage), the dyes are separated, leading to a medium FRET efficiency. 
 However, as \ac{RNAP} moves along the DNA during elongation, the DNA strands at the promoter sequence re-anneal, causing a reduction in the inter-dye distance and resulting in high FRET efficiency.
 
 \begin{figure}
@@ -187,17 +187,17 @@ However, as \ac{RNAP} moves along the DNA during elongation, the DNA strands at 
 RNAP kinetics study.
 A) The RNAP-promoter initial transcribing complex ($RP_{ITC}$) is prepared with a stabilizing dinucleotide (red symbol) as the nascent RNA chain.
 Complementary DNA strands are labeled at DNA promoter bases with donor (D, green, position -5) and acceptor (A, red, position -8) dyes. 
-After formation of a transcription initiation bubble, the bases to which the dyes are conjugated
+After the formation of a transcription initiation bubble, the bases to which the dyes are conjugated
 are separated, resulting in medium FRET. 
 The initial state remains in stationary conditions until the addition of the four missing nucleotides (\ac{NTP}s, yellow arrow), which triggers transcription initiation and elongation. 
-B) During elongation, the transcription bubble moves downstream (to the right), resulting in re-hybridization of the open-bubble at the promoter sequence, and a corresponding decrease in the D-A distance (\textit{i.e.} an increase in FRET efficiency).
-C) Evolution of uncorrected FRET efficiency ($E_{PR}$) distributions as function of time.
+B) During elongation, the transcription bubble moves downstream (to the right), resulting in re-hybridization of the open bubble at the promoter sequence, and a corresponding decrease in the D-A distance (\textit{i.e.} an increase in FRET efficiency).
+C) Evolution of uncorrected FRET efficiency ($E_{PR}$) distributions as a function of time.
 The curves represent Gaussian fits of the $E_{PR}$ histograms using 30~s time windows.
 D) Fraction of high FRET population obtained in the real-time kinetics measurement (grey and blue dots).
 Dots are computed as a function of time using either a 5~s (grey) or 30~s (blue) moving integration window.
 The solid black curve is a single-exponential model fitted to the 30~s moving integration window.
 Quenched kinetics data (red dots)~\cite{lerner_PNAS_2016}, normalized to fit initial and final values of
-the real time kinetics trajectory, are also shown for comparison.
+the real-time kinetics trajectory, are also shown for comparison.
 For more details on the analysis see the Jupyter notebook provided in Ingargiola \textit{et al.}, 2017~\cite{ingargiola_PLOS1_2016}.
 Figure adapted from Ingargiola \textit{et al.}, 2017~\cite{ingargiola_PLOS1_2016}.
 }
@@ -269,7 +269,7 @@ Figure reprinted from Segal \textit{et al}~\cite{segal_methods_2019}.
 The microfluidic \enquote{formulator} device, as illustrated in Figure~\ref{fig:microfluidic_examples}A, offers the capability of swift and precise mixing of small volumes of reactants (down to picoliters). 
 This device enables prolonged measurements, sample flushing, and automated titration with flexibility for numerous repetitions. 
 When applied to \ac{HT-smFRET} analysis, it enhances throughput beyond what was achievable in single-spot geometry experiments~\cite{kim_NM_2011}. 
-Devices like the formulator opens up opportunities for rapid exploration of the equilibrium conformational dynamics of biomolecules and the investigation of how enzymatic activity is influenced by varying chemical conditions.
+Devices like the formulator open up opportunities for rapid exploration of the equilibrium conformational dynamics of biomolecules and the investigation of how enzymatic activity is influenced by varying chemical conditions.
 
 In contrast to the experiments performed on the formulator~\cite{kim_NM_2011}, where the measurement time required overnight data acquisition, \ac{HT-smFRET} has the potential to dramatically decrease the measurement time to the mixing time scale of this type of mixer, which is typically just a few seconds. 
 For instance, if an 8-spot setup collects one data point within a 5~second acquisition time window (as described in Fig.~\ref{fig:RNAP_kinetics}), using our 48-spot setup would reduce the required acquisition time to achieve similar statistics to less than 1 second. 
@@ -285,7 +285,7 @@ Implementing this approach would likely necessitate custom-designed optics for l
 Microfluidic hydrodynamic focusing, as depicted in Fig~\ref{fig:microfluidic_examples}C~\cite{knight_PRL_1998,lipman_science_2003,gambin_LoC_2010,wunderlich_NP_2013} achieves mixing rates several orders of magnitude faster than the formulator. 
 This is accomplished by injecting a sample ($S$) into a cross-junction along with a \enquote{diluent} solution ($D$), causing the three input streams to mix in the outlet channel. 
 Various geometries, such as the one described in Hamadani \textit{et al.}\cite{hamadani_BJ_2008}, can achieve the same outcome. 
-In this setup, as long as the flow remains laminar, a thin slab of sample, $S$ $<<1~\mu$m, becomes focused between laminar streams of the surrounding diluent solution. 
+In this setup, as long as the flow remains laminar, a thin slab of the sample, $S$ $<<1~\mu$m, becomes focused between laminar streams of the surrounding diluent solution. 
 Due to the narrow width of the sample slab, sample and solute molecules diffuse and mix on the timescale of microseconds to milliseconds ($\mu$s - ms). 
 Beyond this \enquote{time 0} point within the mixer's primary channel, sample molecules evolve in a diluent environment as they flow along the main channel. 
 The time $t$ since the start of the reaction is given by $t = d/V$, where $d$ represents the distance from the mixing region, and $V$ is the flow velocity.
@@ -300,7 +300,7 @@ In these setups, single molecules are either rapidly flowed ($>50$~mm/s) through
 Both of these approaches could be adapted for use with \ac{SPAD} arrays and fast single-molecule microfluidic mixers. 
 In the first case, where fast flow exceeds 50~mm/s, it would result in very low photon counts per spot due to limited excitation intensity and the short transit time of each molecule through the detection spot. 
 However, there would be a high likelihood of detecting the same molecule in consecutive spots along the flow direction, as the large flow velocity minimizes the effect of lateral diffusion. 
-For example, for a spot separation of 2~$\mu$m a temporal resolution of approximately 40~$\mu$s could be achieved. 
+For example, for a spot separation of 2~$\mu$m, a temporal resolution of approximately 40~$\mu$s could be achieved. 
 While individual single-molecule time traces generated under these conditions may offer limited information due to the low signal-to-noise ratio, the cumulative statistical analysis of a large number of such time traces could provide unprecedented insights into single-molecule dynamics.
 
 In the second case, where the flow velocity is less than 1~mm/s, the time resolution with identical spot separation would be reduced to more than 2~ms. 
@@ -314,7 +314,7 @@ Nevertheless, conducting cumulative analysis on a substantial number of such sho
 Following the characterization of the enhanced throughput of the 48-spot setup, we transitioned to a proof-of-principle experiment that would demonstrate the measurement of a flowing sample on the \ac{HT-smFRET}-PAX setup, as described in Section~\ref{sec:HT-smFRET_measurements}.
 
 In this experiment, I utilized a basic microfluidic device, which consisted of a single channel and a viewing chamber with dimensions $L \times W \times H = 3.6$~mm $\times  320~\mu$m $\times 10~\mu$m. 
-This device was fixed to a glass coverslip for meausuing on the microscope.
+This device was fixed to a glass coverslip for measuring on the microscope.
 Inlet and outlet holes, approximately 0.5~mm in diameter, were created using a biopsy punch and connected to 20 gauge Tygon tubing via 23 gauge stainless steel pins.
 
 To drive the flow, I connected the outlet tubing to a luer-locking 23 gauge syringe tip, which in turn was linked to a 1~mL Norm-ject syringe mounted in a programmable syringe pump (NE-1000 Multi-Phaser, New Era Pump Systems, NY). 
@@ -399,14 +399,14 @@ To evaluate the impact of flow on single-molecule burst properties, we conducted
 These histograms were aggregated from data acquired over all 48 spots. 
 Initially, I collected data for the sample under conditions of free diffusion, and then repeated the measurements in the presence of flow, with higher excitation power, as explained earlier. 
 Both sets of measurements were recorded for 200~seconds. 
-The resulting histograms (Figure~\ref{fig:ES_flow_noflow_comparison}) revealed that, although the relative proportions of donor-only and FRET bursts differed due to varying excitation intensities, their individual characteristics in terms of $E_{PR}$ and $S$ remained unchanged.
+The resulting histograms (Figure~\ref{fig:ES_flow_noflow_comparison}) revealed that, although the relative proportions of donor-only and FRET bursts differed due to varying excitation intensities, their characteristics in terms of $E_{PR}$ and $S$ remained unchanged.
 
 \begin{figure}
 \centering\includegraphics[width=\textwidth]{chapters/figures/ES_flow_noflow_comparison.png}
 \caption{\label{fig:ES_flow_noflow_comparison} 
 A,B: Comparison of the $E_{PR}-S_u$ histograms
 of a dsDNA FRET sample in the absence (A) or in the presence (B) of flow.
-The diffusion only (no flow or NF) dataset, recorded with lower excitation powers (by a factor $\sim1.6$), was analyzed with a lower rate threshold ($r_m \geq 50$~kHz) for burst search and a lower burst size threshold ($\overline{F} \geq 40$) for burst selection, than the dataset recorded with flow (F), for which $r_m \geq 80~$kHz $= 50 \times 1.6$, $\overline{F} \geq 64 = 40 \times 1.6$, in order to obtain comparable number of bursts for analysis.
+The diffusion-only (no flow or NF) dataset, recorded with lower excitation powers (by a factor $\sim1.6$), was analyzed with a lower rate threshold ($r_m \geq 50$~kHz) for burst search and a lower burst size threshold ($\overline{F} \geq 40$) for burst selection, than the dataset recorded with flow (F), for which $r_m \geq 80~$kHz $= 50 \times 1.6$, $\overline{F} \geq 64 = 40 \times 1.6$, to obtain comparable number of bursts for analysis.
 The numbers next to each sub-population (top-left: donor-only, middle-right: FRET) correspond to the estimated integral under each peak as discussed in C. The $E_{PR},S_u$ location of the donor-only and FRET populations is identical in both experiments. 
 Note that the color scale is logarithmic.
 C: Projected $E_{PR}$ histograms for the no flow (NF, black) and flow (F, red) measurements. 

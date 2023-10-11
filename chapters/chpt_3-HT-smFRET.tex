@@ -2,10 +2,10 @@
 \label{chpt:ht-smFRET}
 
 Diffusion-based \ac{smFRET} measurements offer the advantage of minimal perturbation to the studied molecule, as compared to measurements on immobilized molecules~\cite{rhoades_PNAS_2003,selvin_CSHLP_2008,cohen_OE_2008}.
-The ability to study small volumes of low concentration samples is particularly valuable in various applications, such as those in diagnostics, where patient samples are often limited, and target molecules may exist in very low abundance. 
+The ability to study small volumes of low-concentration samples is particularly valuable in various applications, such as those in diagnostics, where patient samples are often limited, and target molecules may exist in very low abundance. 
 
 However, there are limitations to diffusion-based measurements.
-To ensure identification of each molecular transit as a distinct burst of photons, only one molecule may pass through the excitation-detection volume at a time.
+To ensure the identification of each molecular transit as a distinct burst of photons, only one molecule may pass through the excitation-detection volume at a time.
 For this reason, these experiments are usually constrained to concentrations $\leq$ 100 pM.
 This limitation poses challenges in collecting a sufficient number of bursts for robust statistical analysis. 
 Nonetheless, solution-based single-molecule FRET remains a valuable tool, especially when sensitivity to low concentrations and minimal perturbation are critical.
@@ -13,29 +13,29 @@ Nonetheless, solution-based single-molecule FRET remains a valuable tool, especi
 In practice, this means that single-molecule measurements can extend over minutes to hours, which limits the application of \ac{smFRET} to equilibrium reactions unless complemented by other techniques like microfluidic mixers or trapping methods. 
 Even with these enhancements, gathering statistically significant data requires extended acquisition times. 
 This is because recording single-molecule data sequentially at each time point, as seen in a mixer, or capturing enough individual molecule time-trajectories, as encountered in trapping, can be time-consuming. 
-Parallel or multiplexed acquisition methods are a promising solution to challenges associated with single-molecule detection,  and in the case of diffusion-based measurements also prevents potential immobilization-related artifacts.
+Parallel or multiplexed acquisition methods are a promising solution to challenges associated with single-molecule detection,  and in the case of diffusion-based measurements also prevent potential immobilization-related artifacts.
 These approaches hold the potential to broaden the applicability of \ac{smFRET}, allowing for rapid non-equilibrium kinetic studies and eventually highly sensitive clinical diagnostics.
 
-Expanding upon the recent advancements in \ac{SPAD} arrays, we have successfully showcased parallel detection of single molecules and achieved freely-diffusing \ac{HT-smFRET}. 
+Expanding upon the recent advancements in single photon avalanche diode (\ac{SPAD}) arrays, we have successfully showcased parallel detection of single molecules and achieved freely diffusing \ac{HT-smFRET}. 
 This was accomplished through the iterative design of experimental setups where multiple excitation spots in the sample align with the geometry of the detector array. 
 
 \section{Custom silicon SPAD arrays}
 \label{sec:SPAD_intro}
 
 In this work, we employed custom epitaxial silicon \ac{SPAD} arrays that were meticulously designed and manufactured by the \ac{SPAD} lab at \ac{POLIMI} in Milan, Italy~\cite{ghioni_JSTQE_2007,gulinatti_JMO_2012,gulinatti_SPIE_2013}. 
-The state-of-the-art detector module come equipped with \ac{iAQC}, engineered to rapidly reset the \ac{SPAD}s following the creation of an avalanche triggered by the absorption of an incoming photon.
+The state-of-the-art detector module comes equipped with \ac{iAQC}, engineered to rapidly reset the \ac{SPAD}s following the creation of an avalanche triggered by the absorption of an incoming photon.
 
 Additionally, these modules are endowed with timing electronics that enable the precise counting of single photons. 
 In some cases, they also feature \ac{TCSPC} electronics, which improve the time resolution of single-photon timing to approximately 50~ps~\cite{ingargiola_SPIE_2017}.
 
-Over the past two decades, alternative \ac{SPAD} array designs have emerged, utilizing standard \ac{CMOS} fabrication technology~\cite{bruschini_SPIE_2017}. 
+Over the past two decades, alternative \ac{SPAD} array designs have emerged, utilizing standard complementary metal oxide semiconductor (\ac{CMOS}) fabrication technology~\cite{bruschini_SPIE_2017}. 
 These designs offer the advantage of larger scales, with some arrays comprising over 100,000 \ac{SPAD}s. 
 This scalability is particularly advantageous for wide-field imaging techniques like \ac{FLIM}~\cite{gyongy_IEEETED_2018, ulku_JSTQE_2019} or \ac{HT-FCS}~\cite{buchholz_BJ_2018}.
 
 However, based on experience~\cite{ colyer_SPIE_2011}, \ac{CMOS} \ac{SPAD} arrays tend to exhibit lower \ac{PDE} and generally higher \ac{DCR}s when compared to custom silicon \ac{SPAD} detectors~\cite{ghioni_JSTQE_2007, michalet_JSTQE_2014}. 
-As a result, they are a poor choice for detection of freely-diffusing single molecules.
+As a result, they are a poor choice for the detection of freely diffusing single molecules.
 
-However, due to the rapid pace of technological innovation in this field, the statement regarding \ac{SPAD} array technology may become outdated. 
+However, due to the rapid pace of technological innovation in this field, this statement regarding \ac{SPAD} array technology will likely become quickly outdated. 
 In addition to the differences mentioned, custom technology \ac{SPAD}s offer the advantage of manufacturing larger individual \ac{SPAD}s while maintaining low \ac{DCR}s. 
 This characteristic simplifies the precise optical alignment of the setup, making custom \ac{SPAD} arrays particularly well-suited for single-molecule fluorescence studies.
 
@@ -48,19 +48,19 @@ This characteristic simplifies the precise optical alignment of the setup, makin
 \caption{\label{fig:setup} 48-spot PAX design schematic. 
 The two \ac{CW} lasers and \ac{SPAD} arrays are fixed to a floated optical table. 
 Periscopes are used to bring the beams to the optical breadboard supporting the microscope and \ac{LCOS-SLM}s. 
-Two beam expanders, mirrors, one dichroic mirror and one lens are used to steer the beams to their respective SLMs, form spot arrays and relay them to the back of the back of the microscope objective lens.
-The microscope side port is used to monitor the beam pattern using a \ac{CMOS} camera (an example of which is shown on the left), while the bottom port is used to send the fluorescence signal to the two \ac{SPAD} arrays via relay lenses, a dichroic mirror and emission filters. 
+Two beam expanders, mirrors, one dichroic mirror, and one lens are used to steer the beams to their respective SLMs, form spot arrays, and relay them to the back of the back of the microscope objective lens.
+The microscope side port is used to monitor the beam pattern using a \ac{CMOS} camera (an example of which is shown on the left), while the bottom port is used to send the fluorescence signal to the two \ac{SPAD} arrays via relay lenses, a dichroic mirror, and emission filters. 
 A detailed description can be found in the text.
 Reprinted from Ingargiola \textit{et al.}~\cite{ingargiola_JCP_2018}.}
 \end{figure}
 
 The concept of a multispot setup involves replicating the conventional confocal arrangement of an excitation spot and detector, with the requirement that each confocal spot in the sample corresponds to one \ac{SPAD} in the \ac{SPAD} array. 
-Note that an individual \ac{SPAD} is sometimes referred to in this work as a \enquote{pixel} or a \enquote{channel}.
+Note that an individual \ac{SPAD} is sometimes referred to in this work as a \enquote{pixel}, \enquote{channel}, or \enquote{spot}.
 Several methods can be employed to achieve this, including using physical lenslet arrays, which we initially explored~\cite{colyer_SPIE_2010}, or diffractive optical elements~\cite{gosh_JBO_2005, krmpot_SPIE_2015}. 
 However, these approaches have limitations, such as fixed spot geometries and potential aberrations that must precisely match the pattern of the \ac{SPAD} array in the emission path. 
 Achieving this alignment requires meticulous magnification adjustments and cumbersome alignment steps, including rotational adjustments.
 
-For these reasons, we opted for a more flexible, though somewhat more expensive solution involving the use of programmable \ac{LCOS-SLM}s. 
+For these reasons, we opted for a more flexible, though somewhat more expensive solution involving the use of programmable liquid crystal on silicon spatial light modulators (\ac{LCOS-SLM}s). 
 This approach has been detailed in previous work from the Weiss Lab~\cite{colyer_BOE_2010,ingargiola_SPIE_2013,ingargiola_PLOS1_2016,ingargiola_JCP_2018}.
 
 These devices can be employed in either direct space~\cite{wang_OE_2005} or reciprocal space~\cite{dufresne_RSI_2000}, as utilized in holography. 
@@ -68,7 +68,7 @@ The direct space approach offers the advantage of simple and real-time modificat
 The \ac{LCOS-SLM}s are capable of generating relatively uniform spots over the typical field of view of a high \ac{NA} objective lens~\cite{michalet_PRSB_2013}.
 
 Alternatively, a line or sheet illumination pattern can be used, relying on out-of-focus light rejection by the geometry of the detector array itself (Fig.~\ref{fig:multispot_geometries}B). 
-We demonstrated this with a linear array~\cite{ingargiola_SPIE_2017}, and others have demonstrated it with a 2D array~\cite{buchholz_OE_2012}. 
+We demonstrated this with a linear array~\cite{ingargiola_SPIE_2017}, and others demonstrated it with a 2D array~\cite{buchholz_OE_2012}. 
 Although the latter demonstration was not in the context of single-molecule experiments, the concept is applicable to \ac{smFRET}.
 
 However, these approaches have drawbacks, including increased background signal and inefficient excitation power distribution due to the absence of focused excitation light. 
@@ -85,13 +85,13 @@ This configuration led to the development of a number of analysis tools allowing
 \centering\includegraphics[width=\textwidth]{chapters/figures/multispot_geometries.png}
 \caption{\label{fig:multispot_geometries} Different excitation and \ac{SPAD} array geometries used in this work.
 A) Linear 8-spot and 8-\ac{SPAD} array configuration. 
-The 532~nm laser used in this setup was a high power (1~W) ps-pulsed laser (68~MHz).
+The 532~nm laser used in this setup was a high-power (1~W) ps-pulsed laser (68~MHz).
 The setup was initially equipped with a single \ac{SPAD} array (single color detection: green), and later upgraded with a second linear 8-\ac{SPAD} array (red + green, represented in orange). 
 The physical separation between excitation spots in the sample was $4.8~\mu$m (top)~\cite{colyer_BOE_2010}, matching (after magnification) the $250~\mu$m pitch of the \ac{SPAD}s in the array (\ac{SPAD} diameter: $50~\mu$m, bottom).
-B) A linear illumination pattern created with a cylindrical lens, using the same high power laser as in A was used to excite the fluorescence of samples. 
+B) A linear illumination pattern created with a cylindrical lens, using the same high-power laser as in A was used to excite the fluorescence of samples. 
 A linear 16-\ac{SPAD} array (pitch: $250~\mu$m, diameter: $50~\mu$m) connected to a \ac{TCSPC} module was used to collect the emitted light from the conjugated spots in the sample~\cite{ingargiola_SPIE_2016}.
-C) Two patterns of $4\times12$ spots were generated in the sample by two high power (1~W) lasers (532~nm and 635~nm) and their associated \ac{LCOS-SLM}s. 
-The $5.4~\mu$m distance between neighboring spots, matched, after magnification, the $500~\mu$m distance between \ac{SPAD}s in the corresponding two $4\times12$ \ac{SPAD} arrays 
+C) Two patterns of $12\times4$ spots were generated in the sample by two high power (1~W) lasers (532~nm and 635~nm) and their associated \ac{LCOS-SLM}s. 
+The $5.4~\mu$m distance between neighboring spots, matched, after magnification, the $500~\mu$m distance between \ac{SPAD}s in the corresponding two $12\times4$ \ac{SPAD} arrays 
 (\ac{SPAD} diameter: $50~\mu$m)~\cite{ingargiola_JCP_2018}.
 Reprinted from Segal \textit{et al.}~\cite{segal_methods_2019}.
 }
@@ -100,12 +100,12 @@ Reprinted from Segal \textit{et al.}~\cite{segal_methods_2019}.
 Our next effort at building a \ac{HT-smFRET} setup utilized a larger linear 32-\ac{SPAD} array equipped with \ac{TCSPC} readout electronics, again developed for us by \ac{POLIMI}~\cite{cuccato_IEEEPJ_2013}.
 We employed a 532~nm 86~MHz pulsed laser along with a simplified excitation optical setup. 
 This setup featured a cylindrical lens that was optically aligned with the back focal plane of the microscope objective lens, resulting in a line illumination pattern, as opposed to the use of an \ac{LCOS-SLM}~\cite{ingargiola_SPIE_2017} (Fig. \ref{fig:multispot_geometries}B). 
-The 32-spot \ac{smFRET} setup demonstrated that time-resolved information, such as fluorescence lifetime decays, from multiple spots could be pooled together to accelerate data acquisition, as previously demonstrated for counting applications using \ac{CW} excitation with the 8-spot setup.
+The 32-spot \ac{smFRET} setup demonstrated that time-resolved information, such as fluorescence lifetime decays, from multiple spots, could be pooled together to accelerate data acquisition, as previously demonstrated for counting applications using \ac{CW} excitation with the 8-spot setup.
 
 Our next iteration of the \ac{HT-smFRET} setup used an even larger $12\times4$ \ac{SPAD} array developed by \ac{POLIMI}~\cite{gulinatti_SPIE_2012, ingargiola_JCP_2018} (Fig. \ref{fig:multispot_geometries}C). 
 The 48-spot setup was designed to improve throughput by expanding on the number of confocal spots.
-In addition, we added two \ac{CW} lasers and two \ac{LCOS-SLM}s for excitation of donor and acceptor dyes.
-Addition of an second laser addressed limitations with single-laser excitation.
+In addition, we added two \ac{CW} lasers and two \ac{LCOS-SLM}s for the excitation of donor and acceptor dyes.
+The addition of a second laser addressed limitations with single-laser excitation.
 Rather than implementing \ac{ALEX}, which would require two \ac{AOM}s, we used a single \ac{AOM} to modulate the acceptor excitation only, see Section~\ref{sec:PAX_intro} for more details on this on \ac{PAX}.
 
 Comparison of the 48-spot smFRET-PAX microscope to a standard single-spot ALEX microscope demonstrated that there was no difference in the quality of the data~\cite{ingargiola_JCP_2018}. 
@@ -119,7 +119,7 @@ In addition, Figure~\ref{fig:setup_photos} presents detailed photos of the excit
 \caption{\label{fig:setup_photos} Photographs of the 48-spot setup.
 A) The excitation path consists of two 1~W \ac{CW} lasers (1). 
 Alternation of the red laser by the \ac{AOM} (2) is indicated by red dashes. 
-The lasers pass through a set of beam expanding lenses (3) followed by a second beam expansion (4) once on the upper breadboard.
+The lasers pass through a set of beam-expanding lenses (3) followed by a second beam expansion (4) once on the upper breadboard.
 Both lasers are phase modulated by separate green (5) and red (6) \ac{LCOS-SLM}s and the resulting beamlets are combined with a mixing dichroic (7) and recollimated by a recollimating lens (8) before entering the microscope body (10). 
 B) Emission path optics showing the \ac{CMOS} camera (11) attached to the top side-port for alignment and the bottom path relaying the emitted fluorescence to the green (12) and red (13) \ac{SPAD} arrays. 
 Fluorescence emission is spectrally separated by a dichroic mirror and further filtered with emission filters (not visible), before being imaged onto two $12\times4$ \ac{SPAD} arrays (12 and 13)  mounted on micro-positioning stages powered by two micro-positioning drivers (15).
@@ -148,12 +148,12 @@ This approach closely resembles direct-space modulation using an altered spatial
 
 To generate these spots using the \ac{LCOS-SLM}s, we employed two 8-bit encoded phase images, each with dimensions of $800\times600$ pixels. 
 These phase images were controlled by a custom LabVIEW program, which computed the phase pattern based on user inputs and supported automated pattern scanning, as described in our previous work~\cite{ingargiola_JCP_2018}. 
-The code for our custom tool is available in the \texttt{LCOS\_LabVIEW} repository on GitHub(~\href{https://github.com/multispot-software/LCOS_LabVIEW}{link}).
+The code for our custom tool is available in the \texttt{LCOS\_LabVIEW} repository on GitHub (\href{https://github.com/multispot-software/LCOS_LabVIEW}{link}).
 
 When aligned correctly, the excitation spots converge at the sample plane. 
 The lenslet array is focused at a focal length specified by the user, positioned 3-4~cm from the \ac{LCOS-SLM} surface, as depicted in Figure~\ref{fig:LCOS_params}. 
 
-The pattern can be adjusted by changing its center position, rotation, and X and Y pitch independently, which corresponds to shifting, rotating, or scaling the lenslet array. 
+The pattern can be adjusted by changing its center position, rotation, and X and Y pitch independently, corresponding to shifting, rotating, or scaling the lenslet array. 
 This adjustment is facilitated using the \texttt{LCOS\_LabVIEW} software, where both the center, pitch, and rotation of each pattern can be modified (Figure~\ref{fig:LCOS_params}, panels B and C).
 
 \begin{figure}
@@ -177,7 +177,7 @@ This translates to a lenslet pitch on the \ac{LCOS-SLM} of about $463~\mu$m or r
 During alignment, the pitch is precisely adjusted to accommodate the specific demagnification in the excitation path by making minute shifts in the pattern in terms of \ac{LCOS-SLM} pixel units.
 
 Additionally, the lenslet arrays have distinct focal lengths, with the green pattern having a focal length of 36~mm and the red pattern 30~mm. 
-This difference in focal lengths is intentionally chosen to compensate for the variations in \ac{PSF} size between the 532~nm and 628~nm wavelengths.
+This difference in focal lengths is intentionally chosen to compensate for the variations in the size of the \ac{PSF} of the 532~nm and 628~nm wavelengths.
 
 Figure~\ref{fig:pattern_profile} displays the excitation patterns for the green and red lasers, which were visualized using a camera with samples of high-concentration ATTO550 (Fig.~\ref{fig:pattern_profile}A) and ATTO647N (Fig.~\ref{fig:pattern_profile}B) dyes. 
 During the alignment process, the patterns were centered on the optical axis to maximize their overlap.
@@ -200,11 +200,11 @@ Reproduced from Ingargiola \textit{et al.,} 2018~\cite{ingargiola_JCP_2018}.
 }
 \end{figure}
 
-To modify the lenslet focal length, it's necessary to adjust the distance between the $L3$ lens (\ref{fig:setup}) and the \ac{LCOS-SLM} to maintain the focal plane at the correct distance. 
+To modify the lenslet focal length, it is necessary to adjust the distance between the $L3$ lens (\ref{fig:setup}) and the \ac{LCOS-SLM} to maintain the focal plane at the correct distance. 
 The \ac{LCOS-SLM} region surrounding the $12\times4$ pattern can receive light, potentially leading to stray wide-field excitation and an increase in background signals. 
-To mitigate this, we fill the unused \ac{LCOS-SLM} area with a \enquote{beam steering} pattern, which consists of a periodic pattern in one direction, described in more detail in the following section~\ref{sec:background_suppression}. 
+To mitigate this, we fill the unused \ac{LCOS-SLM} area with a \enquote{beam steering} pattern, which consists of a periodic pattern in one direction, described in more detail in Section~\ref{sec:background_suppression}. 
 
-It is worth highlighting a fundamental difference in our approach compared to Kloster-Landsberg's~\cite{kloster-landsberg_RSI_2013} method. 
+It is worth highlighting a fundamental difference in our approach compared to Kloster-Landsberg's~\cite {kloster-landsberg_RSI_2013} method. 
 In our setup, different portions of the \ac{LCOS-SLM} are allocated to different spots, while Kloster-Landsberg's method uses a much longer focal length to create a single phase pattern that combines contributions from all spots~\cite{kloster-landsberg_RSI_2013}. 
 A detailed experimental comparison to assess the relative strengths of these two approaches is currently lacking.
 
@@ -218,7 +218,7 @@ These filters were designed to be approximately 1~mm larger than the $12\times4$
 However, unmodulated light that is not blocked by the rectangular spatial filter can lead to specular reflections contributing to background noise.
 
 To mitigate this effect, we implemented a beam-steering pattern based on Bragg diffraction. 
-This pattern works by diffracting incoming light at an angle relative to the optical axis, ensuring that light not contributing to the lenslet pattern is directed away from the the back aperture of the objective lens, as illustrated in Figure~\ref{fig:LCOS_params}A.
+This pattern works by diffracting incoming light at an angle relative to the optical axis, ensuring that light not contributing to the lenslet pattern is directed away from the back aperture of the objective lens, as illustrated in Figure~\ref{fig:LCOS_params}A.
 The Bragg pattern is applied around the lenslet array, filling the region surrounding the $12\times4$ \ac{LCOS-SLM} pattern with a periodic design. 
 Figure~\ref{fig:LCOS_params}B and C provide an example of the LabVIEW parameters for configuring a 255-bit \ac{LCOS-SLM} to generate a $12\times4$ pattern for both green and red excitations.
 These parameters are used to control the phase modulation on the \ac{LCOS-SLM}.
@@ -236,7 +236,7 @@ Subsequently, the emitted fluorescence is collimated and passes through an emiss
 Here, the donor and acceptor emission wavelengths are separated before being refocused onto their respective detectors.
 
 Both \ac{SPAD} arrays are mounted on micro-positioners, which enable adjustments of the detectors in all three dimensions. 
-Adjustments in the transversal directions was achieved by software controlled open-loop, piezo-motors. 
+Adjustments in the transversal directions were achieved by software-controlled open-loop, piezo-motors. 
 The \texttt{picomotor} software used for controlling these micro-positioners is accessible in the GitHub \href{https://github.com/tritemio/picomotor}{repository}.
 
 Alignment in the axial direction is less critical and can be performed manually. 
@@ -262,12 +262,12 @@ It can be used to report average counts per \ac{SPAD} or to transmit streams of 
 The \ac{SPAD} arrays are maintained at a cooling temperature of approximately $-15^{\circ}$C to minimize their \ac{DCR}.
 These cooled \ac{SPAD}s exhibit exceptionally low \ac{DCR} values, reaching as low as 30~Hz, with an average in the range of a few hundred Hz. 
 Specifically, the donor channel has a \ac{DCR} of $531\pm918$~Hz, while the acceptor channel registers a \ac{DCR} of $577\pm1,261$~Hz~\cite{ingargiola_JCP_2018}. 
-Although a few \ac{SPAD}s have \ac{DCR}s on the order of a few kHz, this level of noise remains suitable for smFRET studies, particularly when considering that sample background noise often reaches comparable levels.
+Although a few \ac{SPAD}s have \ac{DCR}s on the order of a few kHz, this level of noise remains suitable for \ac{smFRET} studies, particularly when considering that sample background noise often reaches comparable levels.
 
 The detection efficiency of the standard technology \ac{SPAD} arrays exhibits its peak at 550~nm, achieving a \ac{PDE} of approximately $45\%$. 
 This \ac{PDE} makes it well-suited for detecting the donor dye (ATTO550, emission peak: 576~nm). 
 However, its efficiency diminishes for the acceptor dye (ATTO647N, emission peak: 664~nm), where the \ac{PDE} drops to around $35\%$\cite{gulinatti_SPIE_2012, gulinatti_SPIE_2013, michalet_JSTQE_2014}. 
-Notably, these values are roughly $20 - 50\%$ lower than those of the most common \ac{SPAD} detector used in single-spot smFRET measurements (SPCM-AQR, Excelitas Technology Corp., Waltham, MA)\cite{michalet_PRSB_2013}. 
+Notably, these values are roughly $20 - 50\%$ lower than those of the most common \ac{SPAD} detector used in single-spot \ac{smFRET} measurements (SPCM-AQR, Excelitas Technology Corp., Waltham, MA)\cite{michalet_PRSB_2013}. 
 In our laboratory, we are currently assessing \ac{SPAD} arrays fabricated with a red-enhanced technology, which promises improved sensitivity in the red region of the spectrum\cite{panzeri_SPIE_2013, ceccarelli_IEEEPTL_2018}. 
 The adoption of these red-enhanced \ac{SPAD} arrays will narrow the performance gap between donor and acceptor detection efficiency.
 
@@ -279,14 +279,14 @@ These carriers may be released with a delay after the initial counting event, le
 The characteristic time scales of these delayed signals vary among devices, spanning from hundreds of nanoseconds to several microseconds. 
 This variability can result in noticeable effects on the \ac{ACF} when conducting \ac{FCS} analysis~\cite{colyer_BOE_2010,ingargiola_PLOS1_2016}.
 
-Correcting for afterpulsing typically involves techniques that rely on clear separation between the time scale of afterpulsing and the phenomenon under investigation~\cite{zhao_AO_2003}. 
+Correcting for afterpulsing typically involves techniques that rely on a clear separation between the time scale of afterpulsing and the phenomenon under investigation~\cite{zhao_AO_2003}. 
 In some instances, certain \ac{SPAD} arrays do not meet this condition, making it challenging to accurately extract parameters associated with short time scales (typically less than $1-10~\mu$s) using \ac{ACF} analysis alone. 
 Nonetheless, afterpulsing contributions can often be reasonably accounted for by fitting with a power law~\cite{colyer_BOE_2010,ingargiola_PLOS1_2016}.
 
 Alternatively, short time-scale correlation analysis can be carried out using \ac{CCF} analysis when the signal is equally split between two distinct detectors~\cite{krichevsky_RPP_2002}. 
 However, this approach necessitates twice the number of \ac{SPAD} arrays.
 
-The afterpulsing probability, denoted as $P_a$, can be estimated under the assumption that detector deadtime and afterpulsing effects are independent~\cite{Finn_RSI_1988}. 
+The afterpulsing probability, denoted as $P_a$, can be estimated under the assumption that the detector deadtime and afterpulsing effects are independent~\cite{Finn_RSI_1988}. 
 This estimation is achieved by recording counts under constant illumination and can be expressed as:
 
 \begin{equation}
@@ -305,7 +305,7 @@ Q=\frac{var\left(S\right)}{<S>}-1
 
 \noindent
 In situations with constant illumination where $\lambda \tau_d << 1$, $P_a$ is approximately $\approx \frac{1}{2}Q$, which is typically small. 
-Note that for a pure Poisson process, $Q = 0$, therefor $P_a$ measures the departure from this ideal situation. 
+Note that for a pure Poisson process, $Q = 0$, therefore $P_a$ measures the departure from this ideal situation. 
 The measured afterpulsing probability, was several percent in \ac{SPAD} arrays, which is higher than in single \ac{SPAD}s, where $P_a<0.1\%$~\cite{ingargiola_PLOS1_2016}. 
 However, this will likely improve in future generations of detectors.
 
@@ -338,8 +338,8 @@ In an ideal configuration, the image of each excitation-detection region should 
 Our \ac{SPAD} arrays have a pitch-to-diameter ratio of $500~\mu$m $/$ $50~\mu$m = 10, and a detection path magnification of $M = 90$ ensuring that the full width of the \ac{PSF}'s image ($\approx M\lambda$) is comparable to the \ac{SPAD} diameter. 
 This design guarantees that there is no overlap between the \ac{PSF} images of neighboring spots.
 
-It should be noted that custom \ac{SPAD} arrays are not yet commercially available, however this is sure to change in the near future. 
-As previously mentioned, \ac{CMOS} \ac{SPAD} arrays are currently available, however they are not practical for single-molecule detection.
+It should be noted that custom \ac{SPAD} arrays are not yet commercially available, however, this is sure to change in the near future. 
+As previously mentioned, \ac{CMOS} \ac{SPAD} arrays are currently available, however, they are not practical for single-molecule detection.
 
 \section{Multispot data acquisition}
 \label{sec:data_acquisition}
@@ -367,7 +367,7 @@ Since this synchronization has not been implemented, we adopted an alternative a
 
 The programmable counting board, which was employed in previously cited works, enables buffered asynchronous data transfer to the host computer (PXI-7813R, National Instruments, Austin, TX). 
 It can support up to 160 \ac{TTL} inputs, sufficient for handling up to three 48-\ac{SPAD} arrays. 
-The data comprises a 12.5~ns resolution, 24-bit time-stamp for each photon, along with a 7-bit pixel number. 
+The data comprises a 12.5~ns resolution, a 24-bit time-stamp for each photon, along with a 7-bit pixel number. 
 Although the PXI-7813R theoretically has a throughput of 40~MHz, sustained transfer rates are generally lower, which may lead to lost counts at high count rates. 
 However, in \ac{smFRET} the average count rate per channel rarely exceeds 10~kHz, and while instantaneous peak count rates can reach a few MHz per pixel, each pixel's counts are uncorrelated with the others. 
 The LabVIEW \ac{FPGA} code for the counting board we used is available in the \texttt{Multichannel-Timestamper} \href{https://github.com/multispot-software/MultichannelTimestamper}{repository}.
@@ -387,7 +387,7 @@ The conversion is achieved using the \texttt{phconvert} Python library (\href{ht
 Photon-HDF5 was designed for maximum flexibility and storage efficiency, making it easily usable with most programming languages.
 It is extensively documented and compliant files contain all the necessary information for interpreting and analyzing single or multispot data. 
 Additionally, \texttt{phconvert} facilitates the conversion of several commercial file formats into Photon-HDF5 files, which serves to simplify data sharing and therefore improve cross-validation of analyses between groups.
-My hope is that this valuable tool will be embraced by the community of diffusing single-molecule spectroscopists. 
+I hope that this valuable tool will be embraced by the community of diffusing single-molecule spectroscopists. 
 
 In our workflow, the conversion from proprietary binary files to Photon-HDF5 format occurs as soon as the binary file is saved. 
 This conversion process is managed by a second computer that continuously monitors the data folder. 
@@ -402,20 +402,21 @@ Future iterations of this setup will likely enable real-time data monitoring and
 In this section, I provide an overview of the typical workflow, with a focus on the steps specific to \ac{HT-smFRET} experiments. 
 For detailed notations, definitions, and analysis procedures, please refer to Appendix~\ref{chpt:analysis_appendix}.
 
-\section{smFRET burst analysis}
+\subsection{smFRET burst analysis}
 \label{sec:FRETBursts_analysis}
 
 The \ac{smFRET} analysis of freely-diffusing molecules in solution is a multi-step process. 
 The fundamental concepts of this analysis have been extensively discussed in previous publications, such as \cite{fries_JPCA_1998, ying_JPCB_2000, eggeling_JB_2001, lee_BPJ_2005, nir_JPCB_2006, sisamakis_MIE_2010, kudryavtsev_CPC_2012, ingargiola_PLOS1_2016}. 
 However, due to the complexity of this analysis, the results are sensitive to various details, including parameter values.
-For instance, when comparing methods or verifying results, having access to not only the raw data but also the analysis parameters, the specific analysis steps performed, and the implementation details is crucial.
+For instance, when comparing methods or verifying results, having access to the raw data and the analysis parameters, the specific analysis steps performed, and the implementation details, are crucial.
 
 To ensure reproducibility and testability in \ac{smFRET} analysis, it is essential to maintain a comprehensive record of the analysis process.
 This includes documenting inputs, outputs, and a complete list of analytical steps. 
 The most effective way to achieve this is by providing access to the source code as well as thorough documentation for both the code and the workflow itself.
 
 In this work, I predominantly employ FRETBursts, an open-source and thoroughly documented Python package available at~\href{https://github.com/tritemio/FRETBursts}{https://github.com/tritemio/FRETBursts}~\cite{ingargiola_PLOS1_2016}. 
-FRETBursts facilitates reproducible single-molecule burst analysis. The steps of data analysis and the corresponding results are recorded within Jupyter notebooks. 
+FRETBursts facilitates reproducible single-molecule burst analysis. 
+The steps of the data analysis and the corresponding results are recorded within Jupyter notebooks. 
 These notebooks are referenced in various figure captions and integrated throughout the text of this article.
 
 In addition, I use the ALiX software, a free, standalone LabVIEW executable that performs essentially the same functions~\cite{ingargiola_PLOS1_2016}. 
@@ -437,7 +438,7 @@ Multispot analysis can be categorized into three distinct types:
 \end{enumerate}
 
 In independent single-spot analysis, each spot is analyzed as an individual measurement. 
-This approach is suitable for scenarios in which each spot explores a distinct sample, for example if multiple parallel microfluidic channels are investigated, with one spot per channel.
+This approach is suitable for scenarios where each spot explores a distinct sample, for example, if multiple parallel microfluidic channels are investigated, with one spot per channel.
 
 The second approach involves gathering data from each spot, conducting separate burst analyses for each dataset, and then combining the burst data from all spots. 
 This pooling of burst data across all spots is done to enhance statistical robustness.
@@ -446,11 +447,11 @@ Finally, in the third scenario, data from different spots can be correlated, for
 This approach allows the extraction of transport coefficients and other information that cannot be obtained through individual spot analysis alone. 
 It is particularly useful for crosstalk estimation (see Section~\ref{sec:crosstalk}) and is used in the microfluidic section of this work (section~\ref{sec:microfluidics_CCF}).
 
-To implement robust pooled smFRET analysis, several factors must be taken into account. 
+To implement robust pooled \ac{smFRET} analysis, several factors must be accounted for. 
 In essence, a measurement carried out with an $n$-spot setup is akin to conducting $n$ separate measurements concurrently on the same sample. 
 Variations among these individual recordings arise from slight disparities in the characteristics of each excitation and detection volume, including peak intensity, as well as variations in the performance of each \ac{SPAD}, especially in terms of per-pixel \ac{DCR} and afterpulsing.
 
-Given that each illumination pattern and detector is independently aligned, these differences are magnified by the number of excitation lasers and detection channels. 
+Given that each illumination pattern and detector are independently aligned, these differences are magnified by the number of excitation lasers and detection channels. 
 This underscores the critical nature of a precise alignment procedure and the need for both thermal and mechanical stability.
 
 To combine burst data from each spot into a unified dataset, it is important to quantify these variations and establish the necessary correction factors. 
